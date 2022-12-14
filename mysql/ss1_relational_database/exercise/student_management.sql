@@ -1,0 +1,12 @@
+create database student_management;
+use student_management;classteacher
+create table class(
+id int,
+name varchar(50)
+);
+create table teacher(
+id int,
+name varchar(150),
+age int,
+country varchar(150)
+);
