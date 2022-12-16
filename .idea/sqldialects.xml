@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/mysql/casestudy_1/create_table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_product_management_database/query_data_with_product_management.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_student_management_database/query_data_with_student_management_database.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_student_management_database/student_management.sql" dialect="GenericSQL" />
+  </component>
+</project>
