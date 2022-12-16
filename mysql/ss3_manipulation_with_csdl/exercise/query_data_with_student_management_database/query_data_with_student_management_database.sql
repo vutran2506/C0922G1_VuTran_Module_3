@@ -63,7 +63,6 @@ values (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);
 
-
 -- Hiển thị tất cả các sinh viên có tên bắt đầu bảng ký tự ‘h’
 select *
 from student
