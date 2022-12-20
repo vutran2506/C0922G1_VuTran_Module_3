@@ -4,9 +4,10 @@ furama_management;
 -- 2.Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 kí tự.
 select *
 from nhan_vien
-where ho_ten like 'H%'
-   or ho_ten like 'T%'
-   or ho_ten like 'K%' and length(ho_ten) <= 15;
+where  substring_index(ho_ten,' ',-1)  like 'H%'
+   or substring_index(ho_ten,' ',-1) like 'T%'
+   or substring_index(ho_ten,' ',-1) like 'K%' 
+   and char_length(ho_ten) <16;
 
 -- 3.Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 select *
@@ -36,11 +37,12 @@ select kh.ma_khach_hang,
        dv.ten_dich_vu,
        hd.ngay_lam_hop_dong,
        hd.ngay_ket_thuc,
-       dv.chi_phi_thue + hdct.so_luong * dvdk.gia 'tong_tien'
+       ifnull(chi_phi_thue,0) + sum(ifnull(so_luong,0 )* ifnull(gia,0)) as 'tong_tien'
 from khach_hang kh
-         join loai_khach lk on kh.ma_loai_khach = lk.ma_loai_khach
-         join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
-         join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
-         join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
-         join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem;
+		left join loai_khach lk on kh.ma_loai_khach = lk.ma_loai_khach
+        left join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
+        left join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
+		left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+        left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+		group by  kh.ma_khach_hang ,hd.ma_hop_dong;
  
