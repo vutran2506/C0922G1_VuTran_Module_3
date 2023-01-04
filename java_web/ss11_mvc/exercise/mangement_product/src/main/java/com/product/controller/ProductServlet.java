@@ -33,9 +33,26 @@ public class ProductServlet extends HttpServlet {
             case "view":
                 viewProduct(request,response);
                 break;
+            case "searchByName":
+                searchByName(request, response);
+                break;
             default:
                 listProducts(request, response);
                 break;
+        }
+    }
+
+    private void searchByName(HttpServletRequest request, HttpServletResponse response) {
+        String searchName = request.getParameter("searchName");
+        List<Product> products = this.productService.searchByName(searchName);
+        request.setAttribute("products", products);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("product/search.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -136,6 +153,9 @@ dispatcher = request.getRequestDispatcher("product/edit.jsp");
                 break;
             case "delete":
 deleteProduct(request,response);
+                break;
+            case "searchByName":
+                searchByName(request,response);
                 break;
             default:
                 break;

@@ -1,29 +1,19 @@
-
+<%--
+  Created by IntelliJ IDEA.
+  User: Admin
+  Date: 1/4/2023
+  Time: 7:21 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html>
 <head>
-    <title>Product List</title>
+    <title>Search Product</title>
 </head>
 <body>
-<h1> Products</h1>
-<p>
-    <a href="/Products?action=create">Create New Product</a>
-
-    <form action="/Products?action=searchByName" method="post">
-    <input type="text" name="searchName">
-    <input type="submit" value="Create Product">
-</form>
-
-</p>
+<h3> Product is:</h3>
 <table border="1">
-    <tr>
-        <td>Name Product</td>
-        <td>Price Product</td>
-        <td>Description Product</td>
-        <td>Brand Product</td>
-        <td>Edit Product</td>
-        <td>Delete Product</td>
-    </tr>
     <c:forEach items='${requestScope["products"]}' var="product">
         <tr>
             <td><a href="/Products?action=view&id=${product.getId()}">${product.getNameProduct()}</a></td>
