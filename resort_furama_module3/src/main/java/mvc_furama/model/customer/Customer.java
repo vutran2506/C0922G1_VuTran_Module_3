@@ -1,10 +1,13 @@
 package mvc_furama.model.customer;
 
+import java.sql.Date;
+
 public class Customer {
     private int id;
-    private int customerTypeId;
+    private CustomerType customerTypeId;
+    private int customerTypeIds;
     private String name;
-    private String dateOfBirth;
+    private java.sql.Date dateOfBirth;
     private boolean gender;
     private String idCard;
     private String phoneNumber;
@@ -14,9 +17,38 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, int customerTypeId, String name, String dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Customer(int id, CustomerType customerTypeId, String name, java.sql.Date dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
         this.id = id;
         this.customerTypeId = customerTypeId;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.idCard = idCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+    }
+    public Customer(int id,int customerTypeIds , String name, java.sql.Date dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
+        this.id = id;
+        this.customerTypeIds =customerTypeIds;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.idCard = idCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+    }
+    public Customer( int customerTypeIds , String name, java.sql.Date dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
+        this.customerTypeIds =customerTypeIds;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
@@ -34,11 +66,19 @@ public class Customer {
         this.id = id;
     }
 
-    public int getCustomerTypeId() {
+    public int getCustomerTypeIds() {
+        return customerTypeIds;
+    }
+
+    public void setCustomerTypeIds(int customerTypeIds) {
+        this.customerTypeIds = customerTypeIds;
+    }
+
+    public CustomerType getCustomerTypeId() {
         return customerTypeId;
     }
 
-    public void setCustomerTypeId(int customerTypeId) {
+    public void setCustomerTypeId(CustomerType customerTypeId) {
         this.customerTypeId = customerTypeId;
     }
 
@@ -50,13 +90,6 @@ public class Customer {
         this.name = name;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
 
     public boolean isGender() {
         return gender;

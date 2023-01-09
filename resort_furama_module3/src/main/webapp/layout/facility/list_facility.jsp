@@ -65,7 +65,7 @@ reservation@furamavietnam.com
                                 Khách Hàng
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="/Customer">Danh Sách khách hàng</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -114,132 +114,92 @@ reservation@furamavietnam.com
 
 </div>
 <div class="row">
-        <div class="col-md-12 d-flex justify-content-center">
-            <h1>Danh Sách Cơ Sở Vật Chất</h1>
-        </div>
+    <div class="col-md-12 d-flex justify-content-center">
+        <h1>Danh Sách Cơ Sở Vật Chất</h1>
     </div>
+</div>
 <div class="row">
-        <div class="col-md-3 ">
-            <button type="button" class="btn btn-primary">Thêm Mới Cơ Sở Vật Chất</button>
-        </div>
+    <div class="col-md-3 ">
+        <button type="button" class="btn btn-primary">Thêm Mới Cơ Sở Vật Chất</button>
+    </div>
     <div class="col-m-9">
     </div>
-    </div>
+</div>
 <div class="row">
-        <div >
-            <table class="table table-primary table-info border-danger border-secondary table-hover" >
-                <thead class="table-light">
-                <tr>
-                    <th scope="row">STT</th>
-                    <th>Tên Cơ Sở</th>
-                    <th>Diện Tích</th>
-                    <th>Giá Thuê</th>
-                    <th>Số Người Tối Đa</th>
-                    <th>Kieeur Thuê</th>
-                    <th>Loại Dịch Vụ</th>
-                    <th>Tiêu Chuẩn Phòng</th>
-                    <th>Mô Tả Tiện Nghi Khác</th>
-                    <th>Diện Tích Hồ Bơi</th>
-                    <th>Số Tầng</th>
-                    <th>Dịch Vụ Miễn Phí</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Villa</td>
-                    <td>100m2</td>
-                    <td>100USD</td>
-                    <td>12</td>
-                    <td>Tháng</td>
-                    <td>5 Stars</td>
-                    <td>Massage,Karaoke,BQQ</td>
-                    <td>Đầy Đủ Tiện Nghi</td>
-                    <td>20m2</td>
-                    <td>3</td>
+    <div>
+        <table class="table table-primary table-info border-danger border-secondary table-hover">
+            <thead class="table-light">
+            <tr>
+                <th scope="row">STT</th>
+                <th>Tên Cơ Sở</th>
+                <th>Diện Tích</th>
+                <th>Giá Thuê</th>
+                <th>Số Người Tối Đa</th>
+                <th>Kieeur Thuê</th>
+                <th>Loại Dịch Vụ</th>
+                <th>Tiêu Chuẩn Phòng</th>
+                <th>Mô Tả Tiện Nghi Khác</th>
+                <th>Diện Tích Hồ Bơi</th>
+                <th>Số Tầng</th>
+                <th>Dịch Vụ Miễn Phí</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <c:forEach var="facility" items="${facilityList}">
+            <tr>
+                <td scope="row">${facility.getId()}</td>
+                <td>${facility.getName()}</td>
+                <td>${facility. getArea()}</td>
+                <td>${facility.getCost()}</td>
+                <td>${facility.getMaxPeople()}</td>
+                <td>${facility.getRentTypeId().getNameRentType()}</td>
+                <td>${facility.getFacilityTypeId().getNameFacilityType()}</td>
+                <td>${facility.getStandardRoom() }</td>
+                <td>${facility.getDescription()}</td>
+                <td>${facility.getPoolArea()}</td>
+                <td>${facility.getNumberOFloor() }</td>
+                <td>${facility.getFacilityFree()}</td>
+                <td><a href="/Customer?action=edit&id=${customer.getId()}">Edit</a></td>
+                <td>
+                    <button onclick="infoDelete('${facility.getId()}','${facility.getName()}')" type="button"
+                            class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Delete
+                    </button>
+                </td>
 
-                    <td>Null</td>
-                    <td>
-                        <button type="button" class=" btn-sm btn btn-primary ">Edit</button>
-                    </td>
-                    <td>
-                        <button type="button" class=" btn-sm btn btn-outline-danger" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>House</td>
-                    <td>70m2</td>
-                    <td>70USD</td>
-                    <td>6</td>
-                    <td>Tháng</td>
-                    <td>4 Stars</td>
-                    <td>Massage,Karaoke,BQQ</td>
-                    <td>Đầy Đủ Tiện Nghi</td>
-                    <td>Null</td>
-                    <td>3</td>
-                    <td>Null</td>
-                    <td>
-                        <button type="button" class=" btn-sm btn btn-primary ">Edit</button>
-                    </td>
-                    <td>
-                        <button type="button" class=" btn-sm btn btn-outline-danger" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Room</td>
-                    <td>30m2</td>
-                    <td>30USD</td>
-                    <td>3</td>
-                    <td>Tháng</td>
-                    <td>Null</td>
-                    <td>Null</td>
-                    <td>Null</td>
-                    <td>Null</td>
-                    <td>Null</td>
-                    <td>Water</td>
-                    <td>
-                        <button type="button" class=" btn-sm btn btn-primary ">Edit</button>
-                    </td>
-                    <td>
-                        <button type="button" class=" btn-sm btn btn-outline-danger" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <!--    Modal-->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
+            </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <form action="/Facility?action=delete" method="post">
                             <div style="" class="modal-body">
-                                ...
+                                <input hidden type="text" id="id" name="id">
+                                <span>Bạn muốn xoá:  </span><span id="name"></span>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Delete</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
-                </tbody>
-            </table>
-        </div>
+            </div>
+
+
+    </div>
 </div>
 <div class="row">
     <div>
@@ -316,4 +276,10 @@ reservation@furamavietnam.com
     </div>
 </div>
 </body>
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("id").value = id;
+        document.getElementById("name").innerText = name;
+    }
+</script>
 </html>

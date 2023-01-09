@@ -26,9 +26,12 @@ public class CustomerTypeRepository implements ICustomerTypeRepository {
                 CustomerType customerType = new CustomerType(id,name);
                 customerTypeList.add(customerType);
             }
+            preparedStatement.close();
+            resultSet.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return customerTypeList;
     }
 }

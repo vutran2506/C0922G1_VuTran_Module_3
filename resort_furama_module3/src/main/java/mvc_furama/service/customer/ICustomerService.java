@@ -1,4 +1,4 @@
-package mvc_furama.service;
+package mvc_furama.service.customer;
 
 import mvc_furama.model.customer.Customer;
 

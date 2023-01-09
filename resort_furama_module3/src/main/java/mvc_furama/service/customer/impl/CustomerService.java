@@ -1,9 +1,9 @@
-package mvc_furama.service.impl;
+package mvc_furama.service.customer.impl;
 
 import mvc_furama.model.customer.Customer;
 import mvc_furama.repository.customer.ICustomerRepository;
 import mvc_furama.repository.customer.impl.CustomerRepository;
-import mvc_furama.service.ICustomerService;
+import mvc_furama.service.customer.ICustomerService;
 
 import java.util.List;
 

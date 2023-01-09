@@ -79,7 +79,7 @@ reservation@furamavietnam.com
                                 Dịch Vụ
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">List Service</a></li>
+                                <li><a class="dropdown-item" href="/Facility">List Service</a></li>
 
                                 <li><a class="dropdown-item" href="#">Add Service</a></li>
                                 <li>

@@ -20,7 +20,13 @@
             </tr>
             <tr>
                 <td>Loại khách hàng</td>
-                <td><input type="text" name="typeId"></td>
+                <td>
+                    <select name="typeId" >
+                    <c:forEach var="customerType" items="${typeList}">
+                            <option value="${customerType.getIdCustomerType()}"> ${customerType.getNameCustomerType()}</option>
+                    </c:forEach>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>Tên khách hàng</td>
@@ -28,11 +34,13 @@
             </tr>
             <tr>
             <td>Ngày sinh</td>
-            <td><input type="text" name="dateOfBirth"></td>
+            <td><input type="date" name="dateOfBirth"></td>
         </tr>
             <tr>
                 <td>Giới tính</td>
-                <td><input type="text" name="gender"></td>
+                <td><input type="radio" name="gender" value="true"> Nam
+                    <input type="radio" name="gender" value="false"> Nữ<br>
+                </td>
             </tr>
             <tr>
                 <td>CMND</td>

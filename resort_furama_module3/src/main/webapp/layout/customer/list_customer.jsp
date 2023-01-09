@@ -3,6 +3,10 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+
+
+
+
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -120,7 +124,7 @@ reservation@furamavietnam.com
 </div>
 <div class="row">
     <div>
-        <button type="button" class="btn btn-primary"><a href="/Customer?action=create">Thêm Mới Khách Hàng</a></button>
+        <button type="button" class="btn btn-primary " style="color: white"><a href="/Customer?action=create"  style="color: white" >Thêm Mới Khách Hàng</a></button>
     </div>
 </div>
 <div class="row">
@@ -145,10 +149,16 @@ reservation@furamavietnam.com
             <c:forEach var="customer" items="${customerList}">
                 <tr>
                     <td><a href="/Customer?action=view&id=${customer.getId()}">${customer.getId()}</a></td>
-                    <td>${customer.getCustomerTypeId()}</td>
+
+                    <td>${customer.getCustomerTypeId().getNameCustomerType()}</td>
                     <td>${customer.getName()}</td>
                     <td>${customer.getDateOfBirth()}</td>
-                    <td>${customer.isGender()}</td>
+                    <c:if test="${customer.isGender()}">
+                        <td>Nam</td>
+                    </c:if>
+                    <c:if test="${!customer.isGender()}">
+                        <td>Nữ</td>
+                    </c:if>
                     <td>${customer.getIdCard()}</td>
                     <td>${customer.getPhoneNumber()}</td>
                     <td>${customer.getEmail()}</td>
@@ -165,6 +175,7 @@ reservation@furamavietnam.com
             </c:forEach>
             </tbody>
         </table>
+
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
             <div class="modal-dialog">
@@ -180,8 +191,8 @@ reservation@furamavietnam.com
                             <span>Bạn muôn xoá:  </span><span id="name"></span>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Delete</button>
                         </div>
                     </form>
                 </div>
