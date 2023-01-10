@@ -1,4 +1,4 @@
-package mvc_furama.model.Facikity;
+package mvc_furama.model.facility;
 
 public class FacilityType {
     private int idFacilityType;

@@ -5,14 +5,17 @@
     <title>JSP - Hello World</title>
 
 
-
-
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+    <%--    phân trang--%>
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous">
 
 </head>
 <body>
@@ -124,12 +127,14 @@ reservation@furamavietnam.com
 </div>
 <div class="row">
     <div>
-        <button type="button" class="btn btn-primary " style="color: white"><a href="/Customer?action=create"  style="color: white" >Thêm Mới Khách Hàng</a></button>
+        <button type="button" class="btn btn-primary " style="color: white"><a href="/Customer?action=create"
+                                                                               style="color: white">Thêm Mới Khách
+            Hàng</a></button>
     </div>
 </div>
 <div class="row">
     <div>
-        <table class="table table-primary table-info border-danger border-secondary table-hover">
+        <table class=" container_fluid table table-striped table-hover" id="tableCustomer">
             <thead class="table-light">
             <tr>
                 <th scope="row">Mã Khác Hàng</th>
@@ -163,7 +168,7 @@ reservation@furamavietnam.com
                     <td>${customer.getPhoneNumber()}</td>
                     <td>${customer.getEmail()}</td>
                     <td>${customer.getAddress()}</td>
-                    <td><a href="/Customer?action=edit&id=${customer.getId()}">Edit</a></td>
+                    <td><a href="/Customer?action=edit&id=${customer.getId()}" class="btn btn-outline-secondary">Edit</a></td>
 
                     <td>
                         <button onclick="infoDelete('${customer.getId()}','${customer.getName()}')" type="button"
@@ -275,11 +280,31 @@ reservation@furamavietnam.com
         </footer>
     </div>
 </div>
-</body>
 <script>
     function infoDelete(id, name) {
         document.getElementById("id").value = id;
         document.getElementById("name").innerText = name;
     }
 </script>
+</body>
+
+
+<%--phân trang--%>
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tableCustomer').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 3
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </html>

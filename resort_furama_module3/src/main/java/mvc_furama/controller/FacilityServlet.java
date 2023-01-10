@@ -1,11 +1,8 @@
 package mvc_furama.controller;
 
-import mvc_furama.model.Facikity.Facility;
-import mvc_furama.model.Facikity.FacilityType;
-import mvc_furama.model.Facikity.RentType;
-import mvc_furama.repository.facility.IFacilityTypeRepository;
-import mvc_furama.repository.facility.impl.FacilityTypeRepository;
-import mvc_furama.repository.facility.impl.RentTypeRepository;
+import mvc_furama.model.facility.Facility;
+import mvc_furama.model.facility.FacilityType;
+import mvc_furama.model.facility.RentType;
 import mvc_furama.service.facility.IFacilityServce;
 import mvc_furama.service.facility.IFacilityTypeService;
 import mvc_furama.service.facility.IRentTypeService;
@@ -35,11 +32,28 @@ if (action==null){
 }
 switch (action){
     case "create":
+        showCreateFacilityForm(request,response);
         break;
     default:
         showFacilityForm(request,response);
         break;
 }
+    }
+
+    private void showCreateFacilityForm(HttpServletRequest request, HttpServletResponse response) {
+        List<FacilityType> facilityTypeList = this.facilityTypeService.listFacilityType();
+        request.setAttribute("facilityTypeList",facilityTypeList);
+        List<RentType> rentTypeList = this.rentTypeService.listRentType();
+        request.setAttribute(" rentTypeList", rentTypeList);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("layout/facility/create_facility.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void showFacilityForm(HttpServletRequest request, HttpServletResponse response) {

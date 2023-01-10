@@ -1,7 +1,6 @@
 package mvc_furama.repository.facility.impl;
 
-import mvc_furama.model.Facikity.FacilityType;
-import mvc_furama.model.Facikity.RentType;
+import mvc_furama.model.facility.RentType;
 import mvc_furama.repository.BaseRepository;
 import mvc_furama.repository.facility.IRentTypeRepository;
 

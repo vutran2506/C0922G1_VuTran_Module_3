@@ -1,6 +1,6 @@
 package mvc_furama.repository.facility;
 
-import mvc_furama.model.Facikity.RentType;
+import mvc_furama.model.facility.RentType;
 
 import java.util.List;
 

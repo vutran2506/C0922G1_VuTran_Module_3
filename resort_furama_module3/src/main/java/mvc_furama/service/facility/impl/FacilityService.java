@@ -1,6 +1,6 @@
 package mvc_furama.service.facility.impl;
 
-import mvc_furama.model.Facikity.Facility;
+import mvc_furama.model.facility.Facility;
 import mvc_furama.repository.facility.IFacilityRepository;
 import mvc_furama.repository.facility.impl.FacilityRepository;
 import mvc_furama.service.facility.IFacilityServce;

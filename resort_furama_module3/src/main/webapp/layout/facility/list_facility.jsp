@@ -4,11 +4,12 @@
 <head>
     <title>JSP - Hello World</title>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
 
 </head>
 <body>
@@ -103,10 +104,13 @@ reservation@furamavietnam.com
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success " type="submit">Tìm Kiếm</button>
-                    </form>
+                    <div style="height: min-content">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success " type="submit">Tìm Kiếm</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -127,8 +131,9 @@ reservation@furamavietnam.com
 </div>
 <div class="row">
     <div>
-        <table class="table table-primary table-info border-danger border-secondary table-hover">
-            <thead class="table-light">
+        <table class="table table-primary  border-secondary table-hover table-striped"
+               id="tableFacility">
+            <thead>
             <tr>
                 <th scope="row">STT</th>
                 <th>Tên Cơ Sở</th>
@@ -142,61 +147,59 @@ reservation@furamavietnam.com
                 <th>Diện Tích Hồ Bơi</th>
                 <th>Số Tầng</th>
                 <th>Dịch Vụ Miễn Phí</th>
-                <th></th>
-                <th></th>
+                <th>Sửa</th>
+                <th>Xoá</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <c:forEach var="facility" items="${facilityList}">
-            <tr>
-                <td scope="row">${facility.getId()}</td>
-                <td>${facility.getName()}</td>
-                <td>${facility. getArea()}</td>
-                <td>${facility.getCost()}</td>
-                <td>${facility.getMaxPeople()}</td>
-                <td>${facility.getRentTypeId().getNameRentType()}</td>
-                <td>${facility.getFacilityTypeId().getNameFacilityType()}</td>
-                <td>${facility.getStandardRoom() }</td>
-                <td>${facility.getDescription()}</td>
-                <td>${facility.getPoolArea()}</td>
-                <td>${facility.getNumberOFloor() }</td>
-                <td>${facility.getFacilityFree()}</td>
-                <td><a href="/Customer?action=edit&id=${customer.getId()}">Edit</a></td>
-                <td>
-                    <button onclick="infoDelete('${facility.getId()}','${facility.getName()}')" type="button"
-                            class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Delete
-                    </button>
-                </td>
-
-            </tr>
+            <c:forEach var="facility" items="${facilityList}">
+                <tr>
+                    <td scope="row">${facility.getId()}</td>
+                    <td>${facility.getName()}</td>
+                    <td>${facility. getArea()}</td>
+                    <td>${facility.getCost()}</td>
+                    <td>${facility.getMaxPeople()}</td>
+                    <td>${facility.getRentTypeId().getNameRentType()}</td>
+                    <td>${facility.getFacilityTypeId().getNameFacilityType()}</td>
+                    <td>${facility.getStandardRoom() }</td>
+                    <td>${facility.getDescription()}</td>
+                    <td>${facility.getPoolArea()}</td>
+                    <td>${facility.getNumberOFloor() }</td>
+                    <td>${facility.getFacilityFree()}</td>
+                    <td><a href="/Customer?action=edit&id=${customer.getId()}">Edit</a></td>
+                    <td>
+                        <button onclick="infoDelete('${facility.getId()}','${facility.getName()}')" type="button"
+                                class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
             </c:forEach>
             </tbody>
         </table>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                        </div>
-                        <form action="/Facility?action=delete" method="post">
-                            <div style="" class="modal-body">
-                                <input hidden type="text" id="id" name="id">
-                                <span>Bạn muốn xoá:  </span><span id="name"></span>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Delete</button>
-                            </div>
-                        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                     </div>
+                    <form action="/Facility?action=delete" method="post">
+                        <div style="" class="modal-body">
+                            <input hidden type="text" id="id" name="id">
+                            <span>Bạn muốn xoá:  </span><span id="name"></span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </div>
 
 
     </div>
@@ -275,11 +278,28 @@ reservation@furamavietnam.com
         </footer>
     </div>
 </div>
-</body>
 <script>
     function infoDelete(id, name) {
         document.getElementById("id").value = id;
         document.getElementById("name").innerText = name;
     }
 </script>
+</body>
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tableFacility').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 3
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+</script>
+
 </html>

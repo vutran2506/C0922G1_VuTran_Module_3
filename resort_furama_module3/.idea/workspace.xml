@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3bcffb0-89d4-42ac-b430-2ec447a80b51" name="Changes" comment="nop casestudy 2.1 2.2">
+    <list default="true" id="e3bcffb0-89d4-42ac-b430-2ec447a80b51" name="Changes" comment="nop casestudy 2.3 2.4">
       <change afterPath="$PROJECT_DIR$/../M3-paging-sorting-jsp-servlet-Boostrap5/.idea/M3-paging-sorting-jsp-servlet-Boostrap5.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../casestudy_web_back_end/demo/demo_chuyen_trang/src/main/java/model/Student.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../casestudy_web_back_end/demo/demo_chuyen_trang/src/main/java/model/StudentServlet.java" afterDir="false" />
@@ -54,18 +54,92 @@
       <change afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/demo_student/src/main/webapp/index.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/demo_student/src/main/webapp/student/create.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/demo_student/src/main/webapp/student/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/config/FormatFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/repository/ICustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/repository/impl/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/repository/impl/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/java/customer/service/impl/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/customer/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/customer/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/customer/search.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/customer/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/bootstrap520/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bootstrap5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bootstrap5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bulma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.bulma.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/jquery/jquery-3.5.1.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/application_calculator/src/main/java/com/example/application_calculator/CalculatorServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/application_calculator/src/main/webapp/exception.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/application_calculator/src/main/webapp/result.jsp" afterDir="false" />
@@ -118,25 +192,119 @@
       <change afterPath="$PROJECT_DIR$/../java_web/ss9_java_web/exercise/discount_product/src/main/java/com/example/discount_product/DiscountPriceServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/ss9_java_web/exercise/discount_product/src/main/webapp/result.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java_web/ss9_java_web/exercise/product_discount_calculator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/config/FilterFurama.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/controller/FacilityServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/Facikity/Facility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/Facikity/FacilityType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/Facikity/RentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IFacilityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IFacilityTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IRentTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/FacilityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/FacilityTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/RentTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/customer/ICustomerTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/customer/impl/CustomerTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IFacilityServce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IFacilityTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IRentTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/FacilityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/FacilityTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/RentTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/contract/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/employee/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/employee/Education.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/employee/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/IDivisionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/IEducationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/IPositionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/impl/DivisionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/impl/EducationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/impl/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/employee/impl/PositionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/IDivisionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/IEducationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/IPositionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/impl/DivisionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/impl/EducationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/impl/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/employee/impl/PositionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/bootstrap520/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bootstrap5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bootstrap5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bulma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.bulma.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/layout/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/layout/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module_3/src/main/webapp/layout/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../casestudy_web_back_end/resort_furama/src/main/java/layout_furama/view_contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_web_back_end/resort_furama/src/main/java/layout_furama/view_contract.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/java/management_user/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/java/management_user/controller/UserServlet.java" afterDir="false" />
@@ -145,6 +313,7 @@
       <change beforePath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/delete.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/luyen_tap/src/main/webapp/customer/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/ss11_mvc/exercise/mangement_product/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/ss11_mvc/exercise/mangement_product/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/ss11_mvc/exercise/mangement_product/src/main/java/com/product/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/ss11_mvc/exercise/mangement_product/src/main/java/com/product/controller/ProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_web/ss11_mvc/exercise/mangement_product/src/main/java/com/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/ss11_mvc/exercise/mangement_product/src/main/java/com/product/service/ProductService.java" afterDir="false" />
@@ -160,16 +329,27 @@
       <change beforePath="$PROJECT_DIR$/../java_web/ss12_JDBC/practice/management_user/src/main/webapp/user/sort.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../java_web/ss12_JDBC/practice/management_user/src/main/webapp/user/sort.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_furama.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_furama.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/controller/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/customer/impl/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/customer/impl/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/customer/impl/CustomerTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/customer/impl/CustomerTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/customer/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/customer/impl/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/controller/FacilityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/controller/FacilityServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/model/Facikity/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/facility/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/model/Facikity/FacilityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/facility/FacilityType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/model/Facikity/RentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/model/facility/RentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IFacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IFacilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IFacilityTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IFacilityTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IRentTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/IRentTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/FacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/FacilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/FacilityTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/FacilityTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/RentTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/repository/facility/impl/RentTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IFacilityServce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IFacilityServce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IFacilityTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IFacilityTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IRentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/IRentTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/FacilityTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/FacilityTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/RentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc_furama/service/facility/impl/RentTypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/customer/create_customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/customer/create_customer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/customer/edit_customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/customer/edit_customer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/customer/list_customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/customer/list_customer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/employee/list_employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/employee/list_employee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/facility/list_facility.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/facility/list_facility.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +397,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/CodeGym_Module_3/resort_furama_module3/src/main/webapp",
+    "last_opened_file_path": "D:/CodeGym_Module_3/resort_furama_module3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -339,6 +519,10 @@
       <workItem from="1673177442075" duration="3240000" />
       <workItem from="1673233789403" duration="18033000" />
       <workItem from="1673265185579" duration="10706000" />
+      <workItem from="1673278498251" duration="216000" />
+      <workItem from="1673313637429" duration="23071000" />
+      <workItem from="1673353758696" duration="3660000" />
+      <workItem from="1673358938411" duration="5211000" />
     </task>
     <task id="LOCAL-00001" summary="nop casestudy 2.1 2.2">
       <created>1673177616782</created>
@@ -347,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673177616782</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="nop casestudy 2.3 2.4">
+      <created>1673278614249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673278614249</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +557,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nop casestudy 2.1 2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="nop casestudy 2.1 2.2" />
+    <MESSAGE value="nop casestudy 2.3 2.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="nop casestudy 2.3 2.4" />
   </component>
 </project>

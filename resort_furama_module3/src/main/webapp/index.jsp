@@ -51,7 +51,7 @@ reservation@furamavietnam.com
                                 Nhân Viên
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="/Employee">Danh Sách Khách Hàng</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
                                     <hr class="dropdown-divider">

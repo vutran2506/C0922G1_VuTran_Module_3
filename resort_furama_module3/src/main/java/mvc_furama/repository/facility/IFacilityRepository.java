@@ -1,6 +1,6 @@
 package mvc_furama.repository.facility;
 
-import mvc_furama.model.Facikity.Facility;
+import mvc_furama.model.facility.Facility;
 
 import java.util.List;
 
