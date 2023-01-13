@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -6,9 +6,7 @@
 </head>
 <body>
 <h1>User</h1>
-<p>
-  <a href="/User">Back to List User</a>
-<p>
+<button> <a href="/User">Back to List User</a></button>
     <c:if test='${requestScope["message"] != null}'>
         <span class="message">${requestScope["message"]}</span>
     </c:if>

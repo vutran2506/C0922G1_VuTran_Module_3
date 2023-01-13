@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b9502d0f-de45-4d78-8f03-821ee51c0daf" name="Changes" comment="nop bai tap ss10">
+      <change afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss6_cascading_style_sheets/practice/practice_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/css_tao_menu_doc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/tao_menu_doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss8_bootstrap/practice/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss8_bootstrap/practice/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy/resort_furama.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_web_back_end/furama_css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/currency_corversion/src/main/java/ModelCustomer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/currency_corversion/src/main/java/ModelCustomer/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/currency_corversion/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_web_back_end/resort_furama.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_web_back_end/resort_furama.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_java_web/exercise/demo12/src/main/java/com/example/demo12/CalculatorServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_java_web/exercise/demo12/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_java_web/exercise/demo12/src/main/webapp/result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/casestudy_1/create_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mysql/casestudy_1/create_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/casestudy_1/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mysql/casestudy_1/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/casestudy_1/query_11_15.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mysql/casestudy_1/query_11_15.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/casestudy_1/query_16_20.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mysql/casestudy_1/query_16_20.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/practice_1.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JcvGzso7WDfMlsst4xLWnAPBt3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/CodeGym_Module_3/java_web/ss10_jstl/exercise/display_list_customer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.702">
+    <configuration name="Tomcat 9.0.702" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.702" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.example : calculator-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="844a171e-5021-4ec8-814b-1fae1c5fd3f7" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56994" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : calculator-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.702" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+      <deployment>
+        <artifact name="Gradle : com.example : calculator-1.0-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Gradle___com_example___calculator_1_0_SNAPSHOT_war__exploded_" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="8b4c1c7e-66c1-4cfa-82a3-b176739e0d1b" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : calculator-1.0-SNAPSHOT.war (exploded)" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Tomcat Server.index.jsp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9502d0f-de45-4d78-8f03-821ee51c0daf" name="Changes" comment="" />
+      <created>1672390097653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672390097653</updated>
+      <workItem from="1672390099088" duration="3361000" />
+      <workItem from="1672398548540" duration="4577000" />
+      <workItem from="1672404713607" duration="863000" />
+    </task>
+    <task id="LOCAL-00001" summary="nop bai tap ss10">
+      <created>1672405503176</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672405503176</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nop bai tap ss10" />
+    <option name="LAST_COMMIT_MESSAGE" value="nop bai tap ss10" />
+  </component>
+</project>

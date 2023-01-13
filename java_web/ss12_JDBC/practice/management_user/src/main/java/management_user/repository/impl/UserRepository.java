@@ -17,7 +17,7 @@ public class UserRepository implements IUserRepository {
     private final String DELETE_USER = "delete from users where id =?";
     private final String UPDATE_USER = "update users set name = ?,email= ?, country =? where id = ?";
     private final String SEARCH_BY_COUNTRY = "select id,name,email,country from users where country =?";
-        private final String SORT_BY_NAME = "select* from users order by name";
+    private final String SORT_BY_NAME = "select* from users order by name";
 
 
     @Override
@@ -48,16 +48,16 @@ public class UserRepository implements IUserRepository {
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_ID);
-            preparedStatement.setInt(1,id);
+            preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
                 users = new Users(id, name, email, country);
             }
         } catch (SQLException throwables) {
-           throwables.printStackTrace();
+            throwables.printStackTrace();
         }
 
         return users;
@@ -87,9 +87,9 @@ public class UserRepository implements IUserRepository {
             preparedStatement.setString(2, users.getEmail());
             preparedStatement.setString(3, users.getCountry());
             preparedStatement.setInt(4, users.getId());
-            return preparedStatement.executeUpdate()>0;
+            return preparedStatement.executeUpdate() > 0;
         } catch (SQLException throwables) {
-           throwables.printStackTrace();
+            throwables.printStackTrace();
         }
         return false;
     }
@@ -99,8 +99,8 @@ public class UserRepository implements IUserRepository {
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USER);
-            preparedStatement.setInt(1,id);
-            return preparedStatement.executeUpdate()>0;
+            preparedStatement.setInt(1, id);
+            return preparedStatement.executeUpdate() > 0;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -114,7 +114,7 @@ public class UserRepository implements IUserRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String country = resultSet.getString("country");
@@ -131,13 +131,13 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public List<Users> searchByCountry(String country) {
-       List<Users> usersList = new ArrayList<>();
+        List<Users> usersList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY);
-            preparedStatement.setString(1,country);
+            preparedStatement.setString(1, country);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");

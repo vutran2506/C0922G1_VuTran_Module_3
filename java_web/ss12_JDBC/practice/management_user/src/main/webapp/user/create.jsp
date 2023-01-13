@@ -7,10 +7,11 @@
 </head>
 <body>
 <h1>Create New User</h1>
+
 <p>
-<c:if test='"${message}"!=null'>
-<span class="message">${"message"}</span>
-</c:if>
+  <c:if test='${requestScope["message"] != null}'>
+    <span class="message">${requestScope["message"]}</span>
+  </c:if>
 </p>
 <p>
   <a href="/User">Back To User List</a>

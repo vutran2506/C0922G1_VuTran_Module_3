@@ -42,6 +42,8 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+
     private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
         User user = new User("quan", "quan.nguyen@codegym.vn", "vn");
 
@@ -49,6 +51,8 @@ public class UserServlet extends HttpServlet {
 
         userService.addUserTransaction(user, permision);
     }
+
+
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -69,6 +73,9 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+
+
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         User user = this.userService.selectUser(id);
@@ -88,6 +95,8 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         try {
@@ -98,6 +107,8 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
+
 
     private void showAllUser(HttpServletRequest request, HttpServletResponse response) {
         List<User> userList = this.userService.selectAllUser();
@@ -133,6 +144,8 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         User user = this.userService.selectUser(id);
@@ -156,6 +169,8 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+
     private void editUser(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
@@ -178,6 +193,7 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 
     private void createUser(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");

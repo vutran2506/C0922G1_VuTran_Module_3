@@ -14,6 +14,14 @@
 <body>
 <h3> Product is:</h3>
 <table border="1">
+    <tr>
+        <td>Name Product</td>
+        <td>Price Product</td>
+        <td>Description Product</td>
+        <td>Brand Product</td>
+        <td>Edit Product</td>
+        <td>Delete Product</td>
+    </tr>
     <c:forEach items='${requestScope["products"]}' var="product">
         <tr>
             <td><a href="/Products?action=view&id=${product.getId()}">${product.getNameProduct()}</a></td>

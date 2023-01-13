@@ -11,9 +11,7 @@
 </head>
 <body>
 <h1>User</h1>
-<p>
-  <a href="/User">Back to List User</a>
-<p>
+<button> <a href="/User">Back to List User</a></button>
   <c:if test='${requestScope["message"] != null}'>
     <span class="message">${requestScope["message"]}</span>
   </c:if>
@@ -21,7 +19,7 @@
 </p>
 <form action="/User?action=edit" method="post">
   <table>
-    <tr>
+    <tr hidden>
       <td>Id User</td>
       <td><input type="text" name="id" value="${user.getId()}"></td>
     </tr>

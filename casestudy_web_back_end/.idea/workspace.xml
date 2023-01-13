@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4fb8a695-ee58-4e0a-8320-de017c5c0f37" name="Changes" comment="nop caseStudy web">
+      <change afterPath="$PROJECT_DIR$/demo/demo_chuyen_trang/src/main/java/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo_chuyen_trang/src/main/java/model/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo_chuyen_trang/src/main/webapp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo_chuyen_trang/src/main/webapp/view_furama.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resort_furama/src/main/java/layout_furama/furama.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resort_furama/src/main/webapp/view_faclity.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/application_calculator/src/main/java/com/example/application_calculator/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/application_calculator/src/main/webapp/exception.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/application_calculator/src/main/webapp/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/src/main/java/com/example/customer_list/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/src/main/java/model/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_jstl/exercise/customer_list/src/main/webapp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/controler/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss10_mvc/practice/practice_mvc/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss9_java_web/exercise/discount_product/src/main/java/com/example/discount_product/DiscountPriceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss9_java_web/exercise/discount_product/src/main/webapp/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web/ss9_java_web/exercise/product_discount_calculator/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JapgK15zdR1ZfWV4NrGojKTuGl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/CodeGym_Module_3/casestudy_web_back_end/resort_furama/src/main/java/layout_furama/view_facilyti.html",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="casestudy_web_back_end" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="casestudy_web_back_end" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fb8a695-ee58-4e0a-8320-de017c5c0f37" name="Changes" comment="" />
+      <created>1672326158123</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672326158123</updated>
+      <workItem from="1672326159615" duration="3970000" />
+      <workItem from="1672370436570" duration="2424000" />
+      <workItem from="1672494555529" duration="27000" />
+      <workItem from="1672719356934" duration="265000" />
+    </task>
+    <task id="LOCAL-00001" summary="nop caseStudy web">
+      <created>1672329883297</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672329883297</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nop caseStudy web" />
+    <option name="LAST_COMMIT_MESSAGE" value="nop caseStudy web" />
+  </component>
+</project>

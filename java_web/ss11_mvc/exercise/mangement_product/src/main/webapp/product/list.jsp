@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
@@ -6,12 +5,11 @@
 </head>
 <body>
 <h1> Products</h1>
-<p>
-    <a href="/Products?action=create">Create New Product</a>
+<button><a href="/Products?action=create">Create New Product</a></button><br>
 
-    <form action="/Products?action=searchByName" method="post">
+<form action="/Products?action=searchByName" method="post">
     <input type="text" name="searchName">
-    <input type="submit" value="Create Product">
+    <button type="submit">Search</button>
 </form>
 
 </p>

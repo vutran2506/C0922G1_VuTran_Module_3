@@ -10,8 +10,8 @@
     <title>User List</title>
 </head>
 <body>
-<h1>User List</h1>
-<p><a href="/User?action=create">Create New User</a></p>
+<h1 style=" text-align: center">User List</h1>
+<button><a href="/User?action=create">Create New User</a></button>
 <table class="table table-striped">
     <tr>
         <td>ID</td>
@@ -27,10 +27,43 @@
             <td>${user.getName()}</td>
             <td>${user.getEmail()}</td>
             <td>${user.getCountry()}</td>
-            <td><a href="/User?action=edit&id=${user.getId()}">Edit</a></td>
-            <td><a href="/User?action=delete&id=${user.getId()}">Delete</a></td>
+            <td><button><a href="/User?action=edit&id=${user.getId()}">Edit</a></button></td>
+            <td>
+                <button onclick="infoDelete('${user.getId()}','${user.getName()}')" type="button"
+                        class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Delete
+                </button>
+            </td>
         </tr>
     </c:forEach>
 </table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/User?action=delete" method="post">
+                <div class="modal-body">
+                    <input hidden type="text" id="id" name="id">
+                    <span>You Want To Delete: </span><span id="name"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("id").value = id;
+        document.getElementById("name").innerHTML = name;
+    }
+</script>
 </html>

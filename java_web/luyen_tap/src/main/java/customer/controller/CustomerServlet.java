@@ -90,6 +90,7 @@ public class CustomerServlet extends HttpServlet {
                 break;
             case "search":
                 searchCustomer(request, response);
+                break;
             default:
                 break;
         }
@@ -136,7 +137,12 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         Customer customer = new Customer(name, email, country);
-        this.customerService.insertCustomer(customer);
+        boolean check = this.customerService.insertCustomer(customer);  String mess ="Thêm mới thành công";
+        if (!check){
+            mess= "Thêm mới không thành công";
+        }
+        request.setAttribute("mess", mess);
+
         showCustomerForm(request, response);
 
     }

@@ -36,7 +36,7 @@
       </tr>
       <tr>
         <td></td>
-        <td><button type="submit">Edit User</button>></td>
+        <td><button type="submit">Edit User</button></td>
       </tr>
     </table>
   </fieldset>

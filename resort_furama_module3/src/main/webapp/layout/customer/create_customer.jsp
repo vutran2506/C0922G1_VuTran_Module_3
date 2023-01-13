@@ -12,7 +12,8 @@
 <div class="row bg-primary">
     <nav class="navbar bg-primary">
         <div class="container-fluid ">
-            <span><img src="https://pic.trangvangvietnam.com/395681342/logo%20chuan.jpg" alt="Logo" width="150" height="50"
+            <span><img src="https://2.bp.blogspot.com/-jSZHyR7WoY0/VKtWJbaS2UI/AAAAAAAALWA/yxXe6bJlklU/s1600/quyet-tam-thi-do.png" alt="Logo" width="150"
+                       height="50"
                        class="d-inline-block align-text-top"></span>
             <span style="float: right ; font-size: large ; margin-right: 100px ">Trần Ngọc Vũ</span>
         </div>
@@ -22,7 +23,9 @@
     <div style="width: 70%; margin: 0 auto">
 
         <p>
-            <button class="btn btn-outline-success"><span style="color: white;text-decoration: none "><a href="/Customer" style="color: black ;text-decoration: none ">Trở về danh sách khác hàng</a></span></button>
+            <button class="btn btn-outline-success"><span style="color: white;text-decoration: none "><a
+                    href="/Customer" style="color: black ;text-decoration: none ">Trở về danh sách khác hàng</a></span>
+            </button>
         </p>
         <form action="/Customer?action=create" method="post">
             <fieldset>
@@ -36,22 +39,23 @@
                         <td>
                             <select name="typeId" required>
                                 <c:forEach var="customerType" items="${typeList}">
-                                    <option value="${customerType.getIdCustomerType()}" > ${customerType.getNameCustomerType()}</option>
+                                    <option value="${customerType.getIdCustomerType()}"> ${customerType.getNameCustomerType()}</option>
                                 </c:forEach>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Tên khách hàng</td>
-                        <td><input type="text" name="name" style="width: 500px" required></td>
+                        <td><input pattern="^[A-Z][a-z]*(\s[A-Z][a-z]*)+$" title="Nhập tên không đúng" type="text" oninput="checkName(this.value)" name="name" style="width: 500px"
+                                   required><span style="color:red;" id="errorName"></span></td>
                     </tr>
                     <tr>
                         <td>Ngày sinh</td>
-                        <td><input type="date" name="dateOfBirth" style="width: 500px "  required></td>
+                        <td><input type="date" name="dateOfBirth" style="width: 500px " required></td>
                     </tr>
                     <tr>
                         <td>Giới tính</td>
-                        <td><input type="radio" name="gender" value="true" checked  > Nam
+                        <td><input type="radio" name="gender" value="true" checked> Nam
                             <input type="radio" name="gender" value="false"> Nữ<br>
                         </td>
                     </tr>
@@ -69,12 +73,13 @@
                     </tr>
                     <tr>
                         <td>Địa chỉ</td>
-                        <td><input type="text" name="address" style="width: 500px"  required></td>
+                        <td><input  type="text" name="address" style="width: 500px" required></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <button type="submit" class="btn btn-outline-success" ><span style="color: black ">Thêm khách hàng</span></button>
+                            <button type="submit" class="btn btn-outline-success"><span style="color: black ">Thêm khách hàng</span>
+                            </button>
                         </td>
                     </tr>
                 </table>
@@ -119,6 +124,22 @@
     </div>
 </div>
 </body>
+
+<%--Regex html--%>
+<script>
+    function checkName(name1) {
+        var errorName = document.getElementById("errorName");
+        var regexName = /^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/;
+        if (!regexName.test(name1)) {
+            errorName.innerHTML = "Nhập tên không đúng";
+        } else {
+            errorName.innerHTML = "";
+        }
+    }
+
+</script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>

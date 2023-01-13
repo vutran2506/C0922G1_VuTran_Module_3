@@ -43,12 +43,16 @@ products.remove(id);
     @Override
     public List<Product> searchByName(String name) {
         List<Product> productList = new ArrayList<>();
-        for (Map.Entry<Integer, Product> entry : products.entrySet()){
-            name = name.toLowerCase();
-            if (entry.getValue().getNameProduct().toLowerCase().contains(name)) {
-                productList.add(entry.getValue());
+        if (name==""){
+            return productList;
+        }else {
+            for (Map.Entry<Integer, Product> entry : products.entrySet()){
+                name = name.toLowerCase();
+                if (entry.getValue().getNameProduct().toLowerCase().contains(name)) {
+                    productList.add(entry.getValue());
+                }
             }
+            return productList;
         }
-        return productList;
     }
 }

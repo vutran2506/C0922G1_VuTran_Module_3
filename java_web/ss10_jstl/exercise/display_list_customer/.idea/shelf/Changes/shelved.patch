@@ -1,0 +1,2261 @@
+Index: ../../../ss9_java_web/exercise/demo12/src/main/java/com/example/demo12/CalculatorServlet.java
+===================================================================
+diff --git a/../../../ss9_java_web/exercise/demo12/src/main/java/com/example/demo12/CalculatorServlet.java b/../../../ss9_java_web/exercise/demo12/src/main/java/com/example/demo12/CalculatorServlet.java
+deleted file mode 100644
+--- a/../../../ss9_java_web/exercise/demo12/src/main/java/com/example/demo12/CalculatorServlet.java	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ /dev/null	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
+@@ -1,26 +0,0 @@
+-package com.example.demo12;
+-
+-import javax.servlet.*;
+-import javax.servlet.http.*;
+-import javax.servlet.annotation.*;
+-import java.io.IOException;
+-
+-@WebServlet(name = "CalculatorServlet", value = "/CalculatorServlet")
+-public class CalculatorServlet extends HttpServlet {
+-    @Override
+-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+-
+-    }
+-
+-    @Override
+-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+-        int price = Integer.parseInt(request.getParameter("price"));
+-        double discount = Double.parseDouble(request.getParameter("discount"));
+-        double discountAmount = price * 0.01;
+-        double afterDiscountPrice = price - discountAmount;
+-        request.setAttribute("result", discountAmount);
+-        request.setAttribute("price", afterDiscountPrice);
+-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+-        requestDispatcher.forward(request, response);
+-    }
+-}
+Index: ../../../ss9_java_web/exercise/demo12/src/main/webapp/index.jsp
+===================================================================
+diff --git a/../../../ss9_java_web/exercise/demo12/src/main/webapp/index.jsp b/../../../ss9_java_web/exercise/demo12/src/main/webapp/index.jsp
+deleted file mode 100644
+--- a/../../../ss9_java_web/exercise/demo12/src/main/webapp/index.jsp	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ /dev/null	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
+@@ -1,32 +0,0 @@
+-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+-<!DOCTYPE html>
+-<html>
+-<head>
+-    <title>Discount-Product- Calculator</title>
+-</head>
+-<body>
+-<div style="margin-right: auto">
+-    <h1>Discount Calculator</h1>
+-    <br/>
+-    <form action="/CalculatorServlet" method="post">
+-
+-        <h3>Product Description</h3>
+-        <label>
+-            <input type="text" name="description">
+-        </label><br>
+-        <h3>List Price</h3>
+-        <label>
+-            <input type="number" name="price">
+-        </label><br>
+-        <h3>Discount Percent</h3>
+-        <label>
+-            <input type="number" name="discount">
+-        </label><br>
+-        <h3>Calculator</h3>
+-        <button type="submit">Submit</button>
+-
+-    </form>
+-</div>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: ../../../../mysql/practice_1.sql
+===================================================================
+diff --git a/../../../../mysql/practice_1.sql b/../../../../mysql/practice_1.sql
+deleted file mode 100644
+--- a/../../../../mysql/practice_1.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ /dev/null	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
+@@ -1,2 +0,0 @@
+-create database `my_database`;
+-drop database `my_database`;
+\ No newline at end of file
+Index: ../../../ss9_java_web/exercise/demo12/src/main/webapp/result.jsp
+===================================================================
+diff --git a/../../../ss9_java_web/exercise/demo12/src/main/webapp/result.jsp b/../../../ss9_java_web/exercise/demo12/src/main/webapp/result.jsp
+deleted file mode 100644
+--- a/../../../ss9_java_web/exercise/demo12/src/main/webapp/result.jsp	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ /dev/null	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
+@@ -1,17 +0,0 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: Admin
+-  Date: 12/29/2022
+-  Time: 7:32 PM
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<html>
+-<head>
+-    <title>Discount-Product- Calculator</title>
+-</head>
+-<body>
+-<h1>Discount Amount: ${result}</h1>
+-<h1>After Discount Price: ${price}</h1>
+-</body>
+-</html>
+Index: ../../../../cascading_style_sheets/ss6_cascading_style_sheets/practice/practice_2.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss6_cascading_style_sheets/practice/practice_2.html b/../../../../cascading_style_sheets/ss6_cascading_style_sheets/practice/practice_2.html
+new file mode 100644
+--- /dev/null	(date 1671767657950)
++++ b/../../../../cascading_style_sheets/ss6_cascading_style_sheets/practice/practice_2.html	(date 1671767657950)
+@@ -0,0 +1,30 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++  <style>
++    h1{
++      color : blue;
++      font-family:"Times New Roman";
++      font-size: 200%;
++    }
++    p{
++      color: red;
++      font-family:"Times New Roman";
++      font-size: 120%;
++      border: 1px solid gray;
++      padding:  10px;
++    }
++    #element1{
++      color: blue;
++      }
++  </style>
++</head>
++<body>
++<h1> Đây  là đề mục</h1>
++<p> Đây là một đoạn văn bản</p>
++<p> Đây là một đoạn văn bản</p>
++<p id="element1"> Đây là một đoạn văn bản</p>
++</body>
++</html>
+\ No newline at end of file
+Index: ../../practice/currency_corversion/src/main/java/ModelCustomer/CustomerServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../practice/currency_corversion/src/main/java/ModelCustomer/CustomerServlet.java b/../../practice/currency_corversion/src/main/java/ModelCustomer/CustomerServlet.java
+new file mode 100644
+--- /dev/null	(date 1672387001883)
++++ b/../../practice/currency_corversion/src/main/java/ModelCustomer/CustomerServlet.java	(date 1672387001883)
+@@ -0,0 +1,30 @@
++package ModelCustomer;
++
++import javax.servlet.*;
++import javax.servlet.http.*;
++import javax.servlet.annotation.*;
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.List;
++
++@WebServlet(name = "CustomerServlet", value = "/CustomerServlet")
++public class CustomerServlet extends HttpServlet {
++    private static List<Customer> customerList = new ArrayList<>();
++    static {
++        customerList.add(new Customer("Mai Văn Hoàng","1982-08-20","Hà Nội","https://tse4.mm.bing.net/th?id=OIP.bKS-pAbTiZDTqwyuGfh2ZwHaLI&pid=Api&P=0"));
++        customerList.add(new Customer("Nguyễn Văn Nam","1982-08-21","Bắc Giang","https://tse1.mm.bing.net/th?id=OIP.zDpkbSxWJKF9vp9HB0zkSgHaLH&pid=Api&P=0 "));
++        customerList.add(new Customer("Nguyễn Thái Hoà","1982-08-22","Nam Định","https://toplist.vn/images/800px/chup-hinh-gia-an-319523.jpg "));
++        customerList.add(new Customer("Trần Đăng Khoa","1982-08-17","Hà Tây"," https://dichvuphotoshop.com/wp-content/uploads/2021/05/Photoshop-thay-nen-xanh-anh-the-theo-yeu-cau-1.jpg"));
++        customerList.add(new Customer("Nguyễn Đình Thi","1982-08-19","Hà Nội","https://img1.kienthucvui.vn/uploads/2019/07/19/hinh-the-dep_111316291.png "));
++    }
++    @Override
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++        request.setAttribute("CustomerServlet",customerList);
++        request.getRequestDispatcher("list.jsp").forward(request,response);
++    }
++
++    @Override
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++}
+Index: ../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Create Layout With RWD</title>\r\n    <link rel=\"stylesheet\" href=\"css_s1.css\">\r\n</head>\r\n<body>\r\n<div class=\"row header\" id=\"menu\">\r\n    <div class=\"col-s-12 col-m-1 col-l-1\">\r\n        <p> Logo</p>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-1 col-l-1\">\r\n        <p>  Home</p>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-1 col-l-1\">\r\n        <p> About</p>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-1 col-l-1\">\r\n        <p> Projects</p>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-1 col-l-1\">\r\n        <p>Contact</p>\r\n    </div>\r\n    <div style=\"background: gray\" class=\"col-s-12 col-m-5 col-l-6\">\r\n\r\n    </div>\r\n    <div class=\"col-s-12 col-m-2 col-l-1\">\r\n        <p> Login</p>\r\n    </div>\r\n\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\" col-s-12 col-m-3 col-l-2 left \">\r\n        <ul>\r\n            <li><a>link</a></li>\r\n            <li><a>link</a></li>\r\n            <li><a>link</a></li>\r\n        </ul>\r\n    </div>\r\n    <div style=\"padding: 10px\"; class=\" col-s-12 col-m-9 col-l-8 contain\">\r\n\r\n            <h1> Welcome</h1>\r\n            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\r\n                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\r\n                commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt\r\n                mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ADS\r\n                magna aliqua. Út enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\r\n                commodbo consequat.\r\n            </p>\r\n        <hr>\r\n            <h1>Test</h1>\r\n            <p>lorem ipsum...</p>\r\n        </div>\r\n\r\n    <div  class=\" col-s-12 col-m-12 col-l-2 right\">\r\n        <ul>\r\n            <li style=\"text-align: center\" class=\"ads\">ADS</li>\r\n            <li style=\"text-align: center\" class=\"ads\">ADS</li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div class=\"row footer\">\r\n    <div class=\"col-s-12 col-m-12 col-l-12\">\r\n        <p style=\"text-align: center\"> Footer Text</p>\r\n    </div>\r\n</div>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html
+--- a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/create_layout_with_rwd.html	(date 1672064163746)
+@@ -11,7 +11,7 @@
+         <p> Logo</p>
+     </div>
+     <div class="col-s-12 col-m-1 col-l-1">
+-        <p>  Home</p>
++        <p> Home</p>
+     </div>
+     <div class="col-s-12 col-m-1 col-l-1">
+         <p> About</p>
+@@ -38,22 +38,24 @@
+             <li><a>link</a></li>
+         </ul>
+     </div>
+-    <div style="padding: 10px"; class=" col-s-12 col-m-9 col-l-8 contain">
++    <div style="padding: 10px" ; class=" col-s-12 col-m-9 col-l-8 contain">
+ 
+-            <h1> Welcome</h1>
+-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+-                commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+-                mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ADS
+-                magna aliqua. Út enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+-                commodbo consequat.
+-            </p>
++        <h1> Welcome</h1>
++        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
++            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
++            ea
++            commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
++            mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
++            ADS
++            magna aliqua. Út enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
++            commodbo consequat.
++        </p>
+         <hr>
+-            <h1>Test</h1>
+-            <p>lorem ipsum...</p>
+-        </div>
++        <h1>Test</h1>
++        <p>lorem ipsum...</p>
++    </div>
+ 
+-    <div  class=" col-s-12 col-m-12 col-l-2 right">
++    <div class=" col-s-12 col-m-12 col-l-2 right">
+         <ul>
+             <li style="text-align: center" class="ads">ADS</li>
+             <li style="text-align: center" class="ads">ADS</li>
+Index: ../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.footer{\r\n    background: gray;\r\n    bottom: 0;\r\n\r\n}\r\n.header{\r\n    position: sticky;\r\n    background: gray;\r\n    top: 0;\r\n    height: 5%;\r\n}\r\n\r\n*{\r\n    box-sizing: border-box;\r\n}\r\ndiv{\r\n    border: red;\r\n\r\n}\r\n\r\n#menu div:hover{\r\n    background-color: red;\r\n    text-align: center;\r\n    height: 3%;\r\n\r\n}\r\n.nav{\r\n    background: wheat;\r\n    height: 5%;\r\n}\r\n.row{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 15px;\r\n}\r\n.contain{\r\nbackground: aqua;\r\n}\r\nimg{\r\n    width: 100% ;\r\n    height:20%;\r\n}\r\n@media only screen and (min-width: 1001px) {\r\n    .col-l-1{width: 8.33333%;}\r\n    .col-l-2{width: 16.66667%;}\r\n    .col-l-3{width: 25%;}\r\n    .col-l-4{width: 33.333333%;}\r\n    .col-l-5{width: 41.66667%;}\r\n    .col-l-6{width: 50%;}\r\n    .col-l-7{width: 58.33333%;}\r\n    .col-l-8{width: 66.66667%;}\r\n    .col-l-9{width: 75%;}\r\n    .col-l-10{width: 83.33333%;}\r\n    .col-l-11{width: 91.66667%;}\r\n    .col-l-12{width: 100%;}\r\n}\r\n@media only screen and (max-width:1000px ) and (min-width: 301px){\r\n    .col-m-1{width: 8.33333%;}\r\n    .col-m-2{width: 16.66667%;}\r\n    .col-m-3{width: 25%;}\r\n    .col-m-4{width: 33.333333%;}\r\n    .col-m-5{width: 41.66667%;}\r\n    .col-m-6{width: 50%;}\r\n    .col-m-7{width: 58.33333%;}\r\n    .col-m-8{width: 66.66667%;}\r\n    .col-m-9{width: 75%;}\r\n    .col-m-10{width: 83.33333%;}\r\n    .col-m-11{width: 91.66667%;}\r\n    .col-m-12{width: 100%;}\r\n}\r\n@media only screen and (max-width: 300px){\r\n    .col-s-1{width: 8.33333%;}\r\n    .col-s-2{width: 16.66667%;}\r\n    .col-s-3{width: 25%;}\r\n    .col-s-4{width: 33.333333%;}\r\n    .col-s-5{width: 41.66667%;}\r\n    .col-s-6{width: 50%;}\r\n    .col-s-7{width: 58.33333%;}\r\n    .col-s-8{width: 66.66667%;}\r\n    .col-s-9{width: 75%;}\r\n    .col-s-10{width: 83.33333%;}\r\n    .col-s-11{width: 91.66667%;}\r\n    .col-s-12{width: 100%;}\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css
+--- a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/watch_anime.css	(date 1672110309605)
+@@ -1,84 +1,198 @@
+-.footer{
++.footer {
+     background: gray;
+     bottom: 0;
+ 
+ }
+-.header{
++
++.header {
+     position: sticky;
+     background: gray;
+     top: 0;
+     height: 5%;
+ }
+ 
+-*{
++* {
+     box-sizing: border-box;
+ }
+-div{
++
++div {
+     border: red;
+ 
+ }
+ 
+-#menu div:hover{
++#menu div:hover {
+     background-color: red;
+     text-align: center;
+     height: 3%;
+ 
+ }
+-.nav{
++
++.nav {
+     background: wheat;
+     height: 5%;
+ }
+-.row{
++
++.row {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 15px;
+ }
+-.contain{
+-background: aqua;
++
++.contain {
++    background: aqua;
+ }
+-img{
+-    width: 100% ;
+-    height:20%;
++
++img {
++    width: 100%;
++    height: 20%;
+ }
++
+ @media only screen and (min-width: 1001px) {
+-    .col-l-1{width: 8.33333%;}
+-    .col-l-2{width: 16.66667%;}
+-    .col-l-3{width: 25%;}
+-    .col-l-4{width: 33.333333%;}
+-    .col-l-5{width: 41.66667%;}
+-    .col-l-6{width: 50%;}
+-    .col-l-7{width: 58.33333%;}
+-    .col-l-8{width: 66.66667%;}
+-    .col-l-9{width: 75%;}
+-    .col-l-10{width: 83.33333%;}
+-    .col-l-11{width: 91.66667%;}
+-    .col-l-12{width: 100%;}
+-}
+-@media only screen and (max-width:1000px ) and (min-width: 301px){
+-    .col-m-1{width: 8.33333%;}
+-    .col-m-2{width: 16.66667%;}
+-    .col-m-3{width: 25%;}
+-    .col-m-4{width: 33.333333%;}
+-    .col-m-5{width: 41.66667%;}
+-    .col-m-6{width: 50%;}
+-    .col-m-7{width: 58.33333%;}
+-    .col-m-8{width: 66.66667%;}
+-    .col-m-9{width: 75%;}
+-    .col-m-10{width: 83.33333%;}
+-    .col-m-11{width: 91.66667%;}
+-    .col-m-12{width: 100%;}
+-}
+-@media only screen and (max-width: 300px){
+-    .col-s-1{width: 8.33333%;}
+-    .col-s-2{width: 16.66667%;}
+-    .col-s-3{width: 25%;}
+-    .col-s-4{width: 33.333333%;}
+-    .col-s-5{width: 41.66667%;}
+-    .col-s-6{width: 50%;}
+-    .col-s-7{width: 58.33333%;}
+-    .col-s-8{width: 66.66667%;}
+-    .col-s-9{width: 75%;}
+-    .col-s-10{width: 83.33333%;}
+-    .col-s-11{width: 91.66667%;}
+-    .col-s-12{width: 100%;}
++    .col-l-1 {
++        width: 8.33333%;
++    }
++
++    .col-l-2 {
++        width: 16.66667%;
++    }
++
++    .col-l-3 {
++        width: 25%;
++    }
++
++    .col-l-4 {
++        width: 33.333333%;
++    }
++
++    .col-l-5 {
++        width: 41.66667%;
++    }
++
++    .col-l-6 {
++        width: 50%;
++    }
++
++    .col-l-7 {
++        width: 58.33333%;
++    }
++
++    .col-l-8 {
++        width: 66.66667%;
++    }
++
++    .col-l-9 {
++        width: 75%;
++    }
++
++    .col-l-10 {
++        width: 83.33333%;
++    }
++
++    .col-l-11 {
++        width: 91.66667%;
++    }
++
++    .col-l-12 {
++        width: 100%;
++    }
++}
++
++@media only screen and (max-width: 1000px ) and (min-width: 301px) {
++    .col-m-1 {
++        width: 8.33333%;
++    }
++
++    .col-m-2 {
++        width: 16.66667%;
++    }
++
++    .col-m-3 {
++        width: 25%;
++    }
++
++    .col-m-4 {
++        width: 33.333333%;
++    }
++
++    .col-m-5 {
++        width: 41.66667%;
++    }
++
++    .col-m-6 {
++        width: 50%;
++    }
++
++    .col-m-7 {
++        width: 58.33333%;
++    }
++
++    .col-m-8 {
++        width: 66.66667%;
++    }
++
++    .col-m-9 {
++        width: 75%;
++    }
++
++    .col-m-10 {
++        width: 83.33333%;
++    }
++
++    .col-m-11 {
++        width: 91.66667%;
++    }
++
++    .col-m-12 {
++        width: 100%;
++    }
++}
++
++@media only screen and (max-width: 300px) {
++    .col-s-1 {
++        width: 8.33333%;
++    }
++
++    .col-s-2 {
++        width: 16.66667%;
++    }
++
++    .col-s-3 {
++        width: 25%;
++    }
++
++    .col-s-4 {
++        width: 33.333333%;
++    }
++
++    .col-s-5 {
++        width: 41.66667%;
++    }
++
++    .col-s-6 {
++        width: 50%;
++    }
++
++    .col-s-7 {
++        width: 58.33333%;
++    }
++
++    .col-s-8 {
++        width: 66.66667%;
++    }
++
++    .col-s-9 {
++        width: 75%;
++    }
++
++    .col-s-10 {
++        width: 83.33333%;
++    }
++
++    .col-s-11 {
++        width: 91.66667%;
++    }
++
++    .col-s-12 {
++        width: 100%;
++    }
+ }
+\ No newline at end of file
+Index: ../../practice/currency_corversion/src/main/java/ModelCustomer/Customer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../practice/currency_corversion/src/main/java/ModelCustomer/Customer.java b/../../practice/currency_corversion/src/main/java/ModelCustomer/Customer.java
+new file mode 100644
+--- /dev/null	(date 1672374869082)
++++ b/../../practice/currency_corversion/src/main/java/ModelCustomer/Customer.java	(date 1672374869082)
+@@ -0,0 +1,50 @@
++package ModelCustomer;
++
++public class Customer {
++    private String name;
++    private  String dateOfBirth;
++    private String address;
++    private String img;
++
++    public Customer() {
++    }
++
++    public Customer(String name, String dateOfBirth, String address, String img) {
++        this.name = name;
++        this.dateOfBirth = dateOfBirth;
++        this.address = address;
++        this.img = img;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getDateOfBirth() {
++        return dateOfBirth;
++    }
++
++    public void setDateOfBirth(String dateOfBirth) {
++        this.dateOfBirth = dateOfBirth;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getImg() {
++        return img;
++    }
++
++    public void setImg(String img) {
++        this.img = img;
++    }
++}
+Index: ../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.header,.footer{\r\n    background: gray;\r\n    height:20%;\r\n}\r\nli{\r\nlist-style: none;\r\n}\r\n#menu div:hover{\r\n    background-color: red;\r\n    text-align: center;\r\n}\r\nli{\r\n    padding: 10px;\r\n    color: blue;\r\n}\r\n.ads{\r\n    border: gray;\r\n    width: 70%;\r\n    height: 50%;\r\n    background: white;\r\n    margin: 10px;\r\n    list-style: none;\r\n}\r\n* {\r\n    box-sizing: border-box;\r\n}\r\n\r\n.left{\r\n    background: aqua;\r\n}\r\n\r\n.right{\r\n    background: aqua;\r\n}\r\n\r\n.row{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.contain{\r\n    background: aliceblue;\r\n}\r\n@media only screen and (max-width:1000px ) and (min-width: 301px){\r\n   .col-m-1{width: 8.33333%;}\r\n   .col-m-2{width: 16.66667%;}\r\n   .col-m-3{width: 25%;}\r\n   .col-m-4{width: 33.333333%;}\r\n   .col-m-5{width: 41.66667%;}\r\n   .col-m-6{width: 50%;}\r\n   .col-m-7{width: 58.33333%;}\r\n   .col-m-8{width: 66.66667%;}\r\n   .col-m-9{width: 75%;}\r\n   .col-m-10{width: 83.33333%;}\r\n   .col-m-11{width: 91.66667%;}\r\n   .col-m-12{width: 100%;}\r\n}\r\n@media only screen and (max-width: 300px){\r\n    .col-s-1{width: 8.33333%;}\r\n    .col-s-2{width: 16.66667%;}\r\n    .col-s-3{width: 25%;}\r\n    .col-s-4{width: 33.333333%;}\r\n    .col-s-5{width: 41.66667%;}\r\n    .col-s-6{width: 50%;}\r\n    .col-s-7{width: 58.33333%;}\r\n    .col-s-8{width: 66.66667%;}\r\n    .col-s-9{width: 75%;}\r\n    .col-s-10{width: 83.33333%;}\r\n    .col-s-11{width: 91.66667%;}\r\n    .col-s-12{width: 100%;}\r\n}\r\n@media only screen and (min-width: 1001px) {\r\n    .col-l-1{width: 8.33333%;}\r\n    .col-l-2{width: 16.66667%;}\r\n    .col-l-3{width: 25%;}\r\n    .col-l-4{width: 33.333333%;}\r\n    .col-l-5{width: 41.66667%;}\r\n    .col-l-6{width: 50%;}\r\n    .col-l-7{width: 58.33333%;}\r\n    .col-l-8{width: 66.66667%;}\r\n    .col-l-9{width: 75%;}\r\n    .col-l-10{width: 83.33333%;}\r\n    .col-l-11{width: 91.66667%;}\r\n    .col-l-12{width: 100%;}\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css
+--- a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/create_layout_with_rwd/css_s1.css	(date 1672064163637)
+@@ -1,19 +1,23 @@
+-.header,.footer{
++.header, .footer {
+     background: gray;
+-    height:20%;
++    height: 20%;
+ }
+-li{
+-list-style: none;
++
++li {
++    list-style: none;
+ }
+-#menu div:hover{
++
++#menu div:hover {
+     background-color: red;
+     text-align: center;
+ }
+-li{
++
++li {
+     padding: 10px;
+     color: blue;
+ }
+-.ads{
++
++.ads {
+     border: gray;
+     width: 70%;
+     height: 50%;
+@@ -21,66 +25,175 @@
+     margin: 10px;
+     list-style: none;
+ }
++
+ * {
+     box-sizing: border-box;
+ }
+ 
+-.left{
++.left {
+     background: aqua;
+ }
+ 
+-.right{
++.right {
+     background: aqua;
+ }
+ 
+-.row{
++.row {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+-.contain{
++.contain {
+     background: aliceblue;
+ }
+-@media only screen and (max-width:1000px ) and (min-width: 301px){
+-   .col-m-1{width: 8.33333%;}
+-   .col-m-2{width: 16.66667%;}
+-   .col-m-3{width: 25%;}
+-   .col-m-4{width: 33.333333%;}
+-   .col-m-5{width: 41.66667%;}
+-   .col-m-6{width: 50%;}
+-   .col-m-7{width: 58.33333%;}
+-   .col-m-8{width: 66.66667%;}
+-   .col-m-9{width: 75%;}
+-   .col-m-10{width: 83.33333%;}
+-   .col-m-11{width: 91.66667%;}
+-   .col-m-12{width: 100%;}
+-}
+-@media only screen and (max-width: 300px){
+-    .col-s-1{width: 8.33333%;}
+-    .col-s-2{width: 16.66667%;}
+-    .col-s-3{width: 25%;}
+-    .col-s-4{width: 33.333333%;}
+-    .col-s-5{width: 41.66667%;}
+-    .col-s-6{width: 50%;}
+-    .col-s-7{width: 58.33333%;}
+-    .col-s-8{width: 66.66667%;}
+-    .col-s-9{width: 75%;}
+-    .col-s-10{width: 83.33333%;}
+-    .col-s-11{width: 91.66667%;}
+-    .col-s-12{width: 100%;}
+-}
++
++@media only screen and (max-width: 1000px ) and (min-width: 301px) {
++    .col-m-1 {
++        width: 8.33333%;
++    }
++
++    .col-m-2 {
++        width: 16.66667%;
++    }
++
++    .col-m-3 {
++        width: 25%;
++    }
++
++    .col-m-4 {
++        width: 33.333333%;
++    }
++
++    .col-m-5 {
++        width: 41.66667%;
++    }
++
++    .col-m-6 {
++        width: 50%;
++    }
++
++    .col-m-7 {
++        width: 58.33333%;
++    }
++
++    .col-m-8 {
++        width: 66.66667%;
++    }
++
++    .col-m-9 {
++        width: 75%;
++    }
++
++    .col-m-10 {
++        width: 83.33333%;
++    }
++
++    .col-m-11 {
++        width: 91.66667%;
++    }
++
++    .col-m-12 {
++        width: 100%;
++    }
++}
++
++@media only screen and (max-width: 300px) {
++    .col-s-1 {
++        width: 8.33333%;
++    }
++
++    .col-s-2 {
++        width: 16.66667%;
++    }
++
++    .col-s-3 {
++        width: 25%;
++    }
++
++    .col-s-4 {
++        width: 33.333333%;
++    }
++
++    .col-s-5 {
++        width: 41.66667%;
++    }
++
++    .col-s-6 {
++        width: 50%;
++    }
++
++    .col-s-7 {
++        width: 58.33333%;
++    }
++
++    .col-s-8 {
++        width: 66.66667%;
++    }
++
++    .col-s-9 {
++        width: 75%;
++    }
++
++    .col-s-10 {
++        width: 83.33333%;
++    }
++
++    .col-s-11 {
++        width: 91.66667%;
++    }
++
++    .col-s-12 {
++        width: 100%;
++    }
++}
++
+ @media only screen and (min-width: 1001px) {
+-    .col-l-1{width: 8.33333%;}
+-    .col-l-2{width: 16.66667%;}
+-    .col-l-3{width: 25%;}
+-    .col-l-4{width: 33.333333%;}
+-    .col-l-5{width: 41.66667%;}
+-    .col-l-6{width: 50%;}
+-    .col-l-7{width: 58.33333%;}
+-    .col-l-8{width: 66.66667%;}
+-    .col-l-9{width: 75%;}
+-    .col-l-10{width: 83.33333%;}
+-    .col-l-11{width: 91.66667%;}
+-    .col-l-12{width: 100%;}
++    .col-l-1 {
++        width: 8.33333%;
++    }
++
++    .col-l-2 {
++        width: 16.66667%;
++    }
++
++    .col-l-3 {
++        width: 25%;
++    }
++
++    .col-l-4 {
++        width: 33.333333%;
++    }
++
++    .col-l-5 {
++        width: 41.66667%;
++    }
++
++    .col-l-6 {
++        width: 50%;
++    }
++
++    .col-l-7 {
++        width: 58.33333%;
++    }
++
++    .col-l-8 {
++        width: 66.66667%;
++    }
++
++    .col-l-9 {
++        width: 75%;
++    }
++
++    .col-l-10 {
++        width: 83.33333%;
++    }
++
++    .col-l-11 {
++        width: 91.66667%;
++    }
++
++    .col-l-12 {
++        width: 100%;
++    }
+ }
+ 
+Index: ../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/tao_menu_doc.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/tao_menu_doc.html b/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/tao_menu_doc.html
+new file mode 100644
+--- /dev/null	(date 1672038959016)
++++ b/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/tao_menu_doc.html	(date 1672038959016)
+@@ -0,0 +1,35 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++  <link rel="stylesheet" href="css_tao_menu_doc.css">
++</head>
++<body>
++<h3>ACCP -i110</h3>
++<div id="menu">
++  <ul>
++    <li> <a href="#">Sem 1</a>
++      <ul>
++        <li><a href="#">Computing Fundametal</a></li>
++        <li><a href="#">C Programming</a></li>
++        <li><a href="#">Building Dynamic Website</a></li>
++        <li><a href="#">MS Transact-SQL</a></li>
++        <li><a href="#">Project</a></li>
++      </ul>
++    </li>
++    <li><a href="#">Sem 2</a>
++      <ul>
++        <li><a href="#">Cloud Computing</a></li>
++        <li><a href="#">APJ - I></a></li>
++        <li><a href="#">APJ - II</a></li>
++        <li><a href="#">APJ - III</a></li>
++        <li><a href="#">eProject</a></li>
++      </ul>
++    </li>
++    <li><a href="#">Sem 3</a></li>
++    <li><a href="#">Sem 4</a></li>
++  </ul>
++</div>
++</body>
++</html>
+\ No newline at end of file
+Index: ../../../../casestudy_web_back_end/furama_css.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../casestudy_web_back_end/furama_css.css b/../../../../casestudy_web_back_end/furama_css.css
+new file mode 100644
+--- /dev/null	(date 1672329854604)
++++ b/../../../../casestudy_web_back_end/furama_css.css	(date 1672329854604)
+@@ -0,0 +1,4 @@
++*{
++box-sizing: border-box;
++    margin: 0;
++}
+Index: ../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>develop a website to watch anime online</title>\r\n    <link rel=\"stylesheet\" href=\"watch_anime.css\">\r\n</head>\r\n<body>\r\n<div  class=\"row header\">\r\n    <div class=\"col-s-12 col-m-4 col-l-4\">\r\n        <h4 style=\"top: auto\">Phim Hoạt Hình</h4>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-8 col-l-8\">\r\n        <input style=\"text-align: center; width: 75% \" value=\"Nhập tên tên cần tìm kiếm...\">\r\n    </div>\r\n</div>\r\n<div class=\"row nav\" id=\"menu\">\r\n    <div  class=\"col-s-12 col-m-2 col-l-2\"></div>\r\n    <div class=\"col-s-12 col-m-2 col-l-2\"> <h4>Phim Hoạt hình</h4>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-2 col-l-2\">\r\n        <h4>Phim hoạt hình yêu thích</h4>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-2 col-l-2\">\r\n        <h4>Nhân vật hoạt hình</h4>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-2 col-l-2\">\r\n        <h4>Góp ý</h4>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-2 col-l-2\">\r\n\r\n    </div>\r\n</div>\r\n<div class=\"row contain\">\r\n    <div class=\"col-s-12 col-m-4 col-l-4\">\r\n        <div class=\"row\">\r\n            <img  src=\"https://hhvsub.com/wp-content/uploads/2022/11/doraemon-new-series-meo-may-doremon.jpg\">\r\n        </div>\r\n        <div class=\"row\">\r\n            <span><a href=\"https://www.youtube.com/watch?v=Z3wQunEaMRU\"> [S6] Tuyển Tập Doraemon - Phần 20 -\r\n                Máy Cải Lão Hoàn Đồng, Khách Sạn Thời Kỳ Đồ Đáĩ</a></span>\r\n        </div>\r\n        <div class=\"row\">\r\n            <img src=\"http://diendantienganh.com/uploads/ha/doraemon/2_Doramemon.jpg\">\r\n        </div>\r\n        <div class=\"row\">\r\n            <span><a href=\"https://www.youtube.com/watch?v=N4QdGNHcp5s\">[S6] Doraemon Tập 288 -\r\n                Thử Nói Lời Từ Biệt - Tiếng Việt</a></span>\r\n        </div>\r\n        <div class=\"row\">\r\n            <img  src=\"https://khenphim.com/wp-content/uploads/2020/12/Doraemon-2020-4-banner-e1607620367703.jpg\">\r\n        </div>\r\n        <div class=\"row\">\r\n            <span><a href=\"https://www.youtube.com/watch?v=6mX66RFC8AU\"> [S7] Tuyển Tập Doraemon - Phần 50 -\r\n                Nobita Trong Tim Nobita, Hạnh Phúc Công Chúa Người Cá</a></span>\r\n        </div>\r\n        <div class=\"row\">\r\n            <img  src=\"https://diaphim.com/wp-content/uploads/2021/01/doraemon-nobita-va-mat-trang-phieu-luu-ky-768x543.jpg\">\r\n        </div>\r\n        <div class=\"row\">\r\n            <span><a href=\"https://www.youtube.com/watch?v=JYsE5J5wQoU\">[S6] Tuyển Tập Doraemon - Phần 8 -\r\n                Lãnh Chúa Của Thế Kỷ 21, Việc Làm Thêm Của Người Tuyếtg</a></span>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-s-12 col-m-4 col-l-8\">\r\n        <div class=\"row\">\r\n            <iframe width=\"100%\" height=\"560\" src=\"https://www.youtube.com/embed/Z3wQunEaMRU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n        </div>\r\n        <div class=\"row\">\r\n            <span><a href=\"https://www.youtube.com/watch?v=Z3wQunEaMRU&t=3s\">[S7] Doraemon Tập 344 -\r\n                Chương Trình Ăn Tối Đáng Sợ Của Jaian, Đôi Khi Nobita Cũng Dùng Não Suy Nghĩ</a></span>\r\n            <p>Tác Giả</p>\r\n            <p> Doraemon là một chú mèo máy được Nobi Sewashi (Nobi Nobito), cháu năm đời của Nobi Nobita,\r\n                gửi từ thế kỷ 22 về quá khứ của ông mình để giúp đỡ Nobita trở nên tiến bộ và giàu có,\r\n                tức là cũng sẽ cải thiện hoàn cảnh của con cháu Nobita sau này.</p>\r\n            <p> Câu chuyện trong Doraemon thường có một chủ đề chung, đó là xoay quanh những rắc rối hay xảy ra\r\n                với cậu bé Nobita học lớp năm, nhân vật chính thứ hai của bộ truyện. Doraemon có một chiếc túi thần\r\n                kỳ\r\n                trước bụng với đủ loại bảo bối của tương lai. Cốt truyện thường gặp nhất sẽ là Nobita trở về nhà\r\n                khóc lóc với những rắc rối mà cậu gặp phải ở trường học hoặc với bạn bè. Sau khi bị cậu bé van nài\r\n                hoặc thúc giục, Doraemon sẽ đưa ra một bảo bối giúp Nobita giải quyết những rắc rối của mình,\r\n                hoặc là để trả đũa hay khoe khoang với bạn bè của cậu. Nobita sẽ lại thường đi quá xa so với\r\n                dự định ban đầu của Doraemon, thậm chí với những bảo bối mới cậu còn gặp rắc rối lớn hơn trước đó.\r\n                Đôi khi những người bạn của Nobita, thường là Honekawa Suneo hoặc Goda Takeshi (Jaian),\r\n                lại lấy trộm những bảo bối và sử dụng chúng không đúng mục đích. Tuy nhiên thường thì ở cuối\r\n                mỗi câu chuyện, những ai sử dụng sai mục đích bảo bối sẽ phải chịu hậu quả do mình gây ra, và người\r\n                đọc\r\n                sẽ rút ra được bài học từ đó.</p>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"row footer\">\r\n    <div class=\"col-s-12 col-m-12 col-l-12\">\r\n        <p style=\"text-align: center\">2022-Thiết kế web bởi hoathinhvn.net</p>\r\n    </div>\r\n</div>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html
+--- a/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../cascading_style_sheets/ss7_layout_design_wed/exercise/devolop_a_website_to_wacth_anime_online/devolop_a_website_to_wacth_anime_online.html	(date 1672110148235)
+@@ -6,7 +6,7 @@
+     <link rel="stylesheet" href="watch_anime.css">
+ </head>
+ <body>
+-<div  class="row header">
++<div class="row header">
+     <div class="col-s-12 col-m-4 col-l-4">
+         <h4 style="top: auto">Phim Hoạt Hình</h4>
+     </div>
+@@ -14,9 +14,9 @@
+         <input style="text-align: center; width: 75% " value="Nhập tên tên cần tìm kiếm...">
+     </div>
+ </div>
+-<div class="row nav" id="menu">
+-    <div  class="col-s-12 col-m-2 col-l-2"></div>
+-    <div class="col-s-12 col-m-2 col-l-2"> <h4>Phim Hoạt hình</h4>
++<div class="row nav" style=" margin-top: 10px" id="menu">
++    <div class="col-s-12 col-m-2 col-l-2"></div>
++    <div class="col-s-12 col-m-2 col-l-2"><h4>Phim Hoạt hình</h4>
+     </div>
+     <div class="col-s-12 col-m-2 col-l-2">
+         <h4>Phim hoạt hình yêu thích</h4>
+@@ -34,7 +34,7 @@
+ <div class="row contain">
+     <div class="col-s-12 col-m-4 col-l-4">
+         <div class="row">
+-            <img  src="https://hhvsub.com/wp-content/uploads/2022/11/doraemon-new-series-meo-may-doremon.jpg">
++            <img src="https://hhvsub.com/wp-content/uploads/2022/11/doraemon-new-series-meo-may-doremon.jpg">
+         </div>
+         <div class="row">
+             <span><a href="https://www.youtube.com/watch?v=Z3wQunEaMRU"> [S6] Tuyển Tập Doraemon - Phần 20 -
+@@ -48,14 +48,14 @@
+                 Thử Nói Lời Từ Biệt - Tiếng Việt</a></span>
+         </div>
+         <div class="row">
+-            <img  src="https://khenphim.com/wp-content/uploads/2020/12/Doraemon-2020-4-banner-e1607620367703.jpg">
++            <img src="https://khenphim.com/wp-content/uploads/2020/12/Doraemon-2020-4-banner-e1607620367703.jpg">
+         </div>
+         <div class="row">
+             <span><a href="https://www.youtube.com/watch?v=6mX66RFC8AU"> [S7] Tuyển Tập Doraemon - Phần 50 -
+                 Nobita Trong Tim Nobita, Hạnh Phúc Công Chúa Người Cá</a></span>
+         </div>
+         <div class="row">
+-            <img  src="https://diaphim.com/wp-content/uploads/2021/01/doraemon-nobita-va-mat-trang-phieu-luu-ky-768x543.jpg">
++            <img src="https://diaphim.com/wp-content/uploads/2021/01/doraemon-nobita-va-mat-trang-phieu-luu-ky-768x543.jpg">
+         </div>
+         <div class="row">
+             <span><a href="https://www.youtube.com/watch?v=JYsE5J5wQoU">[S6] Tuyển Tập Doraemon - Phần 8 -
+@@ -64,7 +64,10 @@
+     </div>
+     <div class="col-s-12 col-m-4 col-l-8">
+         <div class="row">
+-            <iframe width="100%" height="560" src="https://www.youtube.com/embed/Z3wQunEaMRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
++            <iframe width="100%" height="560" src="https://www.youtube.com/embed/Z3wQunEaMRU"
++                    title="YouTube video player" frameborder="0"
++                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
++                    allowfullscreen></iframe>
+         </div>
+         <div class="row">
+             <span><a href="https://www.youtube.com/watch?v=Z3wQunEaMRU&t=3s">[S7] Doraemon Tập 344 -
+Index: ../../practice/currency_corversion/src/main/webapp/list.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../practice/currency_corversion/src/main/webapp/list.jsp b/../../practice/currency_corversion/src/main/webapp/list.jsp
+new file mode 100644
+--- /dev/null	(date 1672394326449)
++++ b/../../practice/currency_corversion/src/main/webapp/list.jsp	(date 1672394326449)
+@@ -0,0 +1,51 @@
++
++<%--
++  Created by IntelliJ IDEA.
++  User: Admin
++  Date: 12/30/2022
++  Time: 11:52 AM
++  To change this template use File | Settings | File Templates.
++--%>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
++<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
++<html>
++<head>
++    <title>List Customer</title>
++    <style>
++        img{
++            width: 50px;
++        }
++        th,td{
++            text-align: center;
++        }
++    </style>
++</head>
++
++<body>
++<div  style="width: 50%; height: 50%;">
++    <table class="table ">
++        <thead>
++        <th>STT</th>
++        <th>Name</th>
++        <th>Date Of Birth</th>
++        <th>Address</th>
++        <th>Img</th>
++        </thead>
++        <tbody>
++        <c:forEach var="cumtomer" items="${CustomerServlet}" varStatus="status">
++            <tr>
++                <td>${status.count}</td>
++                <td>${cumtomer.name}</td>
++                <td>${cumtomer.dateOfBirth}</td>
++                <td>${cumtomer.address}</td>
++                <td><img src=${cumtomer.img}></td>
++            </tr>
++        </c:forEach>
++        </tbody>
++    </table>
++</div>
++
++</body>
++</html>
+Index: ../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/css_tao_menu_doc.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/css_tao_menu_doc.css b/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/css_tao_menu_doc.css
+new file mode 100644
+--- /dev/null	(date 1672040054513)
++++ b/../../../../cascading_style_sheets/ss7_layout_design_wed/practice/tao_menu_doc/css_tao_menu_doc.css	(date 1672040054513)
+@@ -0,0 +1,34 @@
++body{
++    font-family: Arial;
++
++}
++#menu, #menu ul, #menu li{
++    padding: 0;
++    margin: 0;
++}
++#menu li{
++list-style: none;
++    position: relative;
++    width: 100px;
++    hieght: 30px;
++    padding: 0px 20px;
++    background: black;
++    line-height:30px;
++    cursor: pointer;
++}
++#menu li a{
++text-decoration: none;
++    color:white;
++  }
++#menu li:hover{
++    background-color: red;
++}
++#menu ul ul{
++    position: absolute;
++    top: 0px;
++    left:130px;
++    visibility: hidden;
++}
++#menu ul li:hover ul{
++visibility: visible;
++}
+Index: ../../../../mysql/casestudy_1/data.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>use\r\nfurama_management;\r\n\r\ninsert into vi_tri(ma_vi_tri, ten_vi_tri)\r\nvalues (1, 'Nhân Viên'),\r\n       (2, 'Quản Lý');\r\n\r\ninsert into trinh_do(ma_trinh_do, ten_trinh_do)\r\nvalues (1, 'Trung Cấp'),\r\n       (2, 'Cao Đẳng'),\r\n       (3, 'Đại Học'),\r\n       (4, 'Sau Đại Học');\r\n\r\ninsert into bo_phan(ma_bo_phan, ten_bo_phan)\r\nvalues (1, 'Sale-Marketing'),\r\n       (2, 'Hành chính'),\r\n       (3, 'Phục vụ'),\r\n       (4, 'Quản lý');\r\n\r\ninsert into nhan_vien(ma_nhan_vien, ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, email, dia_chi, ma_vi_tri,\r\n                      ma_trinh_do, ma_bo_phan)\r\nvalues (1, 'Nguyễn Văn An', '1970-11-07', '456231786', 10000000, '0901234121', 'annguyen@gmail.com',\r\n        '295 Nguyễn Tất Thành,Đà Nẵng', 1, 3, 1),\r\n       (2, 'Lê Văn Bình', '1997-04-09', '654231234', 7000000, '0934212314', 'binhlv@gmail.com', '22 Yên Bái, Đà Nẵng',\r\n        1, 2, 2),\r\n       (3, 'Hồ Thị Yến', '1995-12-12', '999231723', 14000000, '0412352315', 'thiyen@gmail.com',\r\n        'K234/11 Điện Biên Phủ, Gia Lai', 1, 3, 2),\r\n       (4, 'Võ Công Toản', '1980-04-04', '123231365', 17000000, '0374443232', 'toan0404@gmail.com',\r\n        '77 Hoàng Diệu, Quảng Trị', 1, 4, 4),\r\n       (5, 'Nguyễn Bỉnh Phát', '1999-12-09', '454363232', '6000000', '0902341231', 'phatphat@gmail.com',\r\n        '43 Yên Bái, Đà Nẵng', 2, 1, 1),\r\n       (6, 'Khúc Nguyễn An Nghi', '2000-11-08', '964542311', 7000000, '0978653213', 'annghi20@gmail.com',\r\n        '294 Nguyễn Tất Thành, Đà Nẵng', 2, 2, 3),\r\n       (7, 'Nguyễn Hữu Hà', '1993-01-01', '534323231', 8000000, '0941234553', 'nhh0101@gmail.com',\r\n        '4 Nguyễn Chí Thanh, Huế', 2, 3, 2),\r\n       (8, 'Nguyễn Hà Đông', '1989-09-03', '234414123', 9000000, '0642123111', 'donghanguyen@gmail.com',\r\n        '111 Hùng Vương, Hà Nội', 2, 4, 4),\r\n       (9, 'Tòng Hoang', '1982-09-03', '256781231', 6000000, '0245144444', 'hoangtong@gmail.com',\r\n        '213 Hàm Nghi, Đà Nẵng', 2, 4, 4),\r\n       (10, 'Nguyễn Công Đạo', '1994-01-08', '755434343', 8000000, '0988767111', 'nguyencongdao12@gmail.com',\r\n        '6 Hoà Khánh, Đồng Nai', 2, 3, 2);\r\n\r\ninsert into loai_khach(ma_loai_khach, ten_loai_khach)\r\nvalues (1, 'Diamond'),\r\n       (2, 'Platinium'),\r\n       (3, 'Gold'),\r\n       (4, 'Silve'),\r\n       (5, 'Member');\r\n\r\ninsert into khach_hang(ma_khach_hang, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi,\r\n                       ma_loai_khach)\r\nvalues (1, 'Nguyễn Thị Hào', '1970-11-07\t', 0, '643431213', '0945423362', 'thihao07@gmail.com',\r\n        '23 Nguyễn Hoàng, Đà Nẵng', 5),\r\n       (2, 'Phạm Xuân Diệu', '1992-08-08', 1, '865342123', '0954333333', 'xuandieu92@gmail.com',\r\n        'K77/22 Thái Phiên, Quảng Trị', 3),\r\n       (3, 'Trương Đình Nghệ', '1990-02-27', 1, '488645199', '0373213122', 'nghenhan2702@gmail.com',\r\n        'K323/12 Ông Ích Khiêm, Vinh', 1),\r\n       (4, 'Dương Văn Quan', '1981-07-08', 1, '543432111', '0490039241', 'duongquan@gmail.com',\r\n        'K453/12 Lê Lợi, Đà Nẵng', 1),\r\n       (5, 'Hoàng Trần Nhi Nhi', '1995-12-09', 0, '795453345', '0312345678', 'nhinhi123@gmail.com',\r\n        '224 Lý Thái Tổ, Gia Lai', 4),\r\n       (6, 'Tôn Nữ Mộc Châu', '2005-12-06', 0, '732434215', '0988888844', 'tonnuchau@gmail.com', '37 Yên Thế, Đà Nẵng',\r\n        4),\r\n       (7, 'Nguyễn Mỹ Kim', '1984-04-08', 0, '856453123', '0912345698', 'kimcuong84@gmail.com',\r\n        'K123/45 Lê Lợi, Hồ Chí Minh', 1),\r\n       (8, 'Nguyễn Thị Hào', '1999-04-08', 0, '965656433', '0763212345', 'haohao99@gmail.com',\r\n        '55 Nguyễn Văn Linh, Kon Tum', 3),\r\n       (9, 'Trần Đại Danh', '1994-07-01', 1, '432341235', '0643343433', 'danhhai99@gmail.com',\r\n        '24 Lý Thường Kiệt, Quảng Ngãi', 1),\r\n       (10, 'Nguyễn Tâm Đắc', '1989-07-01', 1, '344343432', '0987654321', 'dactam@gmail.com', '22 Ngô Quyền, Đà Nẵng',\r\n        2);\r\n\r\ninsert into kieu_thue(ma_kieu_thue, ten_kieu_thue)\r\nvalues (1, 'year'),\r\n       (2, 'month'),\r\n       (3, 'day'),\r\n       (4, 'hour');\r\n\r\ninsert into loai_dich_vu(ma_loai_dich_vu, ten_loai_dich_vu)\r\nvalues (1, 'Villa'),\r\n       (2, 'House'),\r\n       (3, 'Room');\r\n\r\ninsert into dich_vu(ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong,\r\n                    mo_ta_tien_nghi_khac, dien_tich_ho_boi, so_tang, dich_vu_mien_phi_di_kem, ma_kieu_thue,\r\n                    ma_loai_dich_vu)\r\nvalues (1, 'Villa Beach Front', 25000, 1000000, 10, 'vip', 'Có hồ bơi', 500, 4, 'null', 3, 1),\r\n       (2, 'House Princess 01', 14000, 5000000, 7, 'vip', 'Có thêm bếp nướng', null, 3, 'null', 2, 2),\r\n       (3, 'Room Twin 01', 5000, 1000000, 2, 'normal', 'Có tivi', null, null, '1 Xe máy, 1 Xe đạp', 4, 3),\r\n       (4, 'Villa No Beach Front', 22000, 9000000, 8, 'normal', 'Có hồ bơi', 300, 3, 'null', 3, 1),\r\n       (5, 'House Princess 02', 10000, 4000000, 5, 'normal', 'Có thêm bếp nướng', null, 2, 'null', 3, 2),\r\n       (6, 'Room Twin 02', 3000, 900000, 2, 'normal', 'Có tivi', null, null, '1 Xe máy', 4, 3);\r\n\r\ninsert into dich_vu_di_kem(ma_dich_vu_di_kem, ten_dich_vu_di_kem, gia, don_vi, trang_thai)\r\nvalues (1, 'Karaoke', 10000, 'giờ', 'tiện nghi, hiện đại'),\r\n       (2, 'Thuê xe máy', 10000, 'chiếc', 'hỏng 1 xe'),\r\n       (3, 'Thuê xe đạp', 20000, 'chiếc', 'tốt'),\r\n       (4, 'Buffet buổi sáng', 15000, 'suất', 'đầy đủ đồ ăn, tráng miệng'),\r\n       (5, 'Buffet buổi trưa', 90000, 'suất', 'đầy đủ đồ ăn, tráng miệng'),\r\n       (6, 'Buffet buổi tối', 16000, 'suất', 'đầy đủ đồ ăn, tráng miệng');\r\n\r\ninsert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang,\r\n                     ma_dich_vu)\r\nvalues (1, '2020-12-08', '2020-12-08', 0, 3, 1, 3),\r\n       (2, '2020-07-14', '2020-07-21', 200000, 7, 3, 1),\r\n       (3, '2021-03-15', '2021-03-17', 50000, 3, 4, 2),\r\n       (4, '2021-01-14', '2021-01-18', 100000, 7, 5, 5),\r\n       (6, '2021-06-01', '2021-06-03', 0, 7, 7, 6),\r\n       (8, '2021-06-17', '2021-06-18', 150000, 3, 4, 1),\r\n       (9, '2020-11-19', '2020-11-19', 0, 3, 4, 3),\r\n       (10, '2021-04-12', '2021-04-14', 0, 10, 3, 5),\r\n       (11, '2021-04-25', '2021-04-25', 0, 2, 2, 1),\r\n       (12, '2021-05-25', '2021-05-27', 0, 7, 10, 1);\r\n\r\n\r\ninsert into hop_dong_chi_tiet(ma_hop_dong_chi_tiet, so_luong, ma_hop_dong, ma_dich_vu_di_kem)\r\nvalues (1, 5, 2, 4),\r\n       (2, 8, 2, 5),\r\n       (3, 15, 2, 6),\r\n       (4, 1, 3, 1),\r\n       (5, 11, 3, 2),\r\n       (6, 1, 1, 3),\r\n       (7, 2, 1, 2),\r\n       (8, 2, 12, 2);\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../mysql/casestudy_1/data.sql b/../../../../mysql/casestudy_1/data.sql
+--- a/../../../../mysql/casestudy_1/data.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../mysql/casestudy_1/data.sql	(date 1671431719325)
+@@ -105,7 +105,9 @@
+        (2, '2020-07-14', '2020-07-21', 200000, 7, 3, 1),
+        (3, '2021-03-15', '2021-03-17', 50000, 3, 4, 2),
+        (4, '2021-01-14', '2021-01-18', 100000, 7, 5, 5),
++       (5,	'2021-07-14',	'2021-07-15',	0,	7,	2,	6),
+        (6, '2021-06-01', '2021-06-03', 0, 7, 7, 6),
++       (7,	'2021-09-02',	'2021-09-05',	'100000',	7,	4,	4),
+        (8, '2021-06-17', '2021-06-18', 150000, 3, 4, 1),
+        (9, '2020-11-19', '2020-11-19', 0, 3, 4, 3),
+        (10, '2021-04-12', '2021-04-14', 0, 10, 3, 5),
+Index: ../../../../.idea/sqldialects.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"SqlDialectMappings\">\r\n    <file url=\"file://$PROJECT_DIR$/mysql/casestudy_1/create_table.sql\" dialect=\"GenericSQL\" />\r\n    <file url=\"file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_product_management_database/query_data_with_product_management.sql\" dialect=\"GenericSQL\" />\r\n    <file url=\"file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_student_management_database/query_data_with_student_management_database.sql\" dialect=\"GenericSQL\" />\r\n    <file url=\"file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_student_management_database/student_management.sql\" dialect=\"GenericSQL\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../.idea/sqldialects.xml b/../../../../.idea/sqldialects.xml
+--- a/../../../../.idea/sqldialects.xml	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../.idea/sqldialects.xml	(date 1671280606685)
+@@ -2,6 +2,7 @@
+ <project version="4">
+   <component name="SqlDialectMappings">
+     <file url="file://$PROJECT_DIR$/mysql/casestudy_1/create_table.sql" dialect="GenericSQL" />
++    <file url="file://$PROJECT_DIR$/mysql/casestudy_1/data.sql" dialect="GenericSQL" />
+     <file url="file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_product_management_database/query_data_with_product_management.sql" dialect="GenericSQL" />
+     <file url="file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_student_management_database/query_data_with_student_management_database.sql" dialect="GenericSQL" />
+     <file url="file://$PROJECT_DIR$/mysql/ss3_manipulation_with_csdl/exercise/query_data_with_student_management_database/student_management.sql" dialect="GenericSQL" />
+Index: ../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Use Landing Page</title>\r\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css\"\r\n          integrity=\"sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N\" crossorigin=\"anonymous\">\r\n</head>\r\n<body>\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31\"\r\n             style=\"max-height: 50px;width: 100px\"></a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarScroll\"\r\n            aria-controls=\"navbarScroll\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarScroll\">\r\n        <ul class=\"navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll\" style=\"max-height: 100px;\">\r\n            <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">|</a></li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link disabled\" style=\"font-size:small; color: black \">Surface</a>\r\n            </li>\r\n            </li>\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-expanded=\"false\"\r\n                   style=\"font-size: small; \">\r\n                    Computers\r\n                </a>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                    <li>\r\n                        <hr class=\"dropdown-divider\">\r\n                    </li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                </ul>\r\n            </li>\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-expanded=\"false\"\r\n                   style=\"font-size: small; \">\r\n                    Computers for business\r\n                </a>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                    <li>\r\n                        <hr class=\"dropdown-divider\">\r\n                    </li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                </ul>\r\n            </li>\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-expanded=\"false\"\r\n                   style=\"font-size: small;\">\r\n                    Accessories\r\n                </a>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                    <li>\r\n                        <hr class=\"dropdown-divider\">\r\n                    </li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                </ul>\r\n            </li>\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-expanded=\"false\"\r\n                   style=\"font-size: small;\">\r\n                    Shop Now\r\n                </a>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                    <li>\r\n                        <hr class=\"dropdown-divider\">\r\n                    </li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                </ul>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link disabled\" style=\"font-size: small;color: #2b3035 \">Support</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <button class=\"btn btn-outline-success\" type=\"submit\"\r\n                        style=\"background: royalblue; color: white;font-size: small\">SHOP\r\n                    DEALS\r\n                </button>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <div class=\"form-inline my-2 my-lg-0\">\r\n        <ul class=\"navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll\" style=\"max-height: 100px;\">\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-expanded=\"false\"\r\n                   style=\"font-size: small;\">\r\n                    All Microsoft\r\n                </a>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                    <li>\r\n                        <hr class=\"dropdown-divider\">\r\n                    </li>\r\n                    <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                </ul>\r\n            </li>\r\n            <form class=\"form-inline my-lg-0\" style=\"width: 10rem\">\r\n                <input class=\"form-control \" type=\"search\" aria-label=\"Search\" style=\"width: 75%;height: 50%\">\r\n            </form>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link disabled\" style=\"font-size: medium;color: #2b3035 \">\r\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\"\r\n                         class=\"bi bi-cart3\" viewBox=\"0 0 16 16\">\r\n                        <path d=\"M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z\"/>\r\n                    </svg>\r\n                </a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link disabled\" style=\"font-size: medium;color: #2b3035 \">\r\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\"\r\n                         class=\"bi bi-person-circle\" viewBox=\"0 0 16 16\">\r\n                        <path d=\"M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z\"/>\r\n                        <path fill-rule=\"evenodd\"\r\n                              d=\"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z\"/>\r\n                    </svg>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n    </div>\r\n</nav>\r\n<div class=\"row\" style=\"background:gray ;\">\r\n    <div class=\"col-md-10\">\r\n    </div>\r\n    <div class=\"col-md-1\">\r\n        <a class=\"nav-link disabled\" style=\"font-size: medium;color: #2b3035 \">Animation</a>\r\n    </div>\r\n    <div class=\"col-md-1\">\r\n        <a class=\"nav-link disabled\" style=\"font-size: large;color: #2b3035 \">\r\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-toggle2-on\"\r\n                 viewBox=\"0 0 16 16\">\r\n                <path d=\"M7 5H3a3 3 0 0 0 0 6h4a4.995 4.995 0 0 1-.584-1H3a2 2 0 1 1 0-4h3.416c.156-.357.352-.692.584-1z\"/>\r\n                <path d=\"M16 8A5 5 0 1 1 6 8a5 5 0 0 1 10 0z\"/>\r\n            </svg>\r\n        </a>\r\n\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n    <a><img src=\"https://c.s-microsoft.com/en-us/CMSImages/Surface_HP_Holiday_Hero_wave_5_red_1920x1080.jpg?version=1a595eab-fc15-693d-e500-76674b150916\"\r\n            style=\"height: 100%;width: 100% ; position: relative\"></a>\r\n    <div style=\"position: absolute; \">\r\n        <p style=\"font-size: 50px; margin-left: 70px; margin-top: 150px; color: white\">Laptops designs</p>\r\n        <p style=\"font-size: 50px; margin-left: 70px; color: white\">by Microsoft</p>\r\n        <p style=\"font-size: 20px; margin-left: 70px; color: white\"> Unwrap inspiration this season with Surface\r\n            laptops</p>\r\n        <p style=\"font-size: 20px; margin-left: 70px; color: white\"> and 2-in-1s featuring the best of Windows 11.</p>\r\n        <span style=\"font-size: 20px; margin-left: 70px; color: white\">Surface 9Pro</span>\r\n        <span style=\"font-size: 20px; margin-left: 20px;  color: white\">Surface Laptop 5 </span>\r\n        <span style=\"font-size: 20px; margin-left: 20px;  color: white\">Explore all</span></div>\r\n</div>\r\n<div class=\"row\"style=\"justify-content: center\">\r\n    <div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade\" data-ride=\"carousel\" style=\"width: 40%; color: black \">\r\n        <div class=\"carousel-inner\">\r\n            <div class=\"carousel-item active\">\r\n                <img src=\"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWNWSt?ver=5fd7\"\r\n                     class=\"d-block w-100\" alt=\"\">\r\n            </div>\r\n            <div class=\"carousel-item\">\r\n                <img src=\"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCOYq\"\r\n                     class=\"d-block w-100\" alt=\"Save up to $500 on Surface Pro 8\r\n                     Unwrap possibility with laptop power, tablet portability, and a large display designed for pen and touch.\r\n\r\n\">\r\n            </div>\r\n        </div>\r\n        <button class=\"carousel-control-prev\" type=\"button\" data-target=\"#carouselExampleFade\" data-slide=\"prev\">\r\n            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n            <span class=\"sr-only\">Previous</span>\r\n        </button>\r\n        <button class=\"carousel-control-next\" type=\"button\" data-target=\"#carouselExampleFade\" data-slide=\"next\">\r\n            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n            <span class=\"sr-only\">Next</span>\r\n        </button>\r\n    </div>\r\n</div>\r\n<script src=\"https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js\"\r\n        integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\"\r\n        crossorigin=\"anonymous\"></script>\r\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js\"\r\n        integrity=\"sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct\"\r\n        crossorigin=\"anonymous\"></script>\r\n<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\"\r\n        integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\"\r\n        crossorigin=\"anonymous\"></script>\r\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js\"\r\n        integrity=\"sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+\"\r\n        crossorigin=\"anonymous\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html b/../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html
+--- a/../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../cascading_style_sheets/ss8_bootstrap/exercise/use_landing_page/use_landing_page.html	(date 1672196379709)
+@@ -10,7 +10,7 @@
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <a class="navbar-brand" href="#">
+         <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+-             style="max-height: 50px;width: 100px"></a>
++             style="max-height: 50px;width: 100px;margin-bottom: 0.5rem"></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+@@ -137,17 +137,21 @@
+         <a class="nav-link disabled" style="font-size: medium;color: #2b3035 ">Animation</a>
+     </div>
+     <div class="col-md-1">
+-        <a class="nav-link disabled" style="font-size: large;color: #2b3035 ">
+-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-toggle2-on"
+-                 viewBox="0 0 16 16">
+-                <path d="M7 5H3a3 3 0 0 0 0 6h4a4.995 4.995 0 0 1-.584-1H3a2 2 0 1 1 0-4h3.416c.156-.357.352-.692.584-1z"/>
+-                <path d="M16 8A5 5 0 1 1 6 8a5 5 0 0 1 10 0z"/>
+-            </svg>
+-        </a>
++        <div class="custom-control custom-switch" style=" margin-top: 0.5rem">
++            <input type="checkbox" class="custom-control-input" id="customSwitch1">
++            <label class="custom-control-label" for="customSwitch1">ON</label>
++        </div>
+ 
+     </div>
+ </div>
+-<div class="row">
++<div class="row" style="background: black; color: white ;">
++    <div style="text-align: center; width: 100%; ">
++        <p style="margin-top: 0.6rem"><u>Grab deals when you shop our holiday sale on select Surface laptops, tablets, and
++            2-in-1s. Shop deals ></u></p>
++    </div>
++
++</div>
++<div class="row" style="top: 0">
+     <a><img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_HP_Holiday_Hero_wave_5_red_1920x1080.jpg?version=1a595eab-fc15-693d-e500-76674b150916"
+             style="height: 100%;width: 100% ; position: relative"></a>
+     <div style="position: absolute; ">
+@@ -160,30 +164,28 @@
+         <span style="font-size: 20px; margin-left: 20px;  color: white">Surface Laptop 5 </span>
+         <span style="font-size: 20px; margin-left: 20px;  color: white">Explore all</span></div>
+ </div>
+-<div class="row"style="justify-content: center">
+-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" style="width: 40%; color: black ">
+-        <div class="carousel-inner">
+-            <div class="carousel-item active">
+-                <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWNWSt?ver=5fd7"
+-                     class="d-block w-100" alt="">
+-            </div>
+-            <div class="carousel-item">
+-                <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCOYq"
+-                     class="d-block w-100" alt="Save up to $500 on Surface Pro 8
+-                     Unwrap possibility with laptop power, tablet portability, and a large display designed for pen and touch.
+-
+-">
+-            </div>
+-        </div>
+-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
+-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+-            <span class="sr-only">Previous</span>
+-        </button>
+-        <button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next">
+-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+-            <span class="sr-only">Next</span>
+-        </button>
++<div class="row" style="justify-content: center">
++
++        <div id="carouselExampleIndicators" class="carousel slide col-md-4" data-ride="carousel " style="width: 100%">
++            <div class="carousel-inner">
++                <div class="carousel-item active">
++                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCOYq" class="d-block w-100" alt="...">
++                </div>
++                <div class="carousel-item">
++                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWNWSt?ver=5fd7" class="d-block w-100" alt="...">
++                </div>
++            </div>
++            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
++                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
++                <span class="sr-only">Previous</span>
++            </button>
++            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
++                <span class="carousel-control-next-icon" aria-hidden="true"></span>
++                <span class="sr-only">Next</span>
++            </button>
++
+     </div>
++
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+Index: ../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>create\r\ndatabase if not exists product_management;\r\nuse\r\nproduct_management;\r\n\r\ncreate table customer\r\n(\r\n    customer_id   int auto_increment primary key,\r\n    customer_name varchar(30),\r\n    customer_age  int\r\n);\r\n\r\ncreate table orders\r\n(\r\n    order_id          int auto_increment primary key,\r\n    customer_id       int,\r\n    order_date        datetime,\r\n    order_total_price double,\r\n    foreign key (customer_id) references customer (customer_id)\r\n);\r\n\r\ncreate table product\r\n(\r\n    product_id    int auto_increment primary key,\r\n    product_name  varchar(30),\r\n    product_price double\r\n);\r\n\r\ncreate table order_detail\r\n(\r\n    order_id      int,\r\n    product_id    int,\r\n    order_quality varchar(30),\r\n    foreign key (order_id) references orders (order_id),\r\n    foreign key (product_id) references product (product_id)\r\n);\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql b/../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql
+--- a/../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../mysql/ss2_design_and_create_csdl/exercise/product_management.sql	(date 1671165967985)
+@@ -10,7 +10,7 @@
+     customer_age  int
+ );
+ 
+-create table orders
++create table `order`
+ (
+     order_id          int auto_increment primary key,
+     customer_id       int,
+@@ -31,7 +31,7 @@
+     order_id      int,
+     product_id    int,
+     order_quality varchar(30),
+-    foreign key (order_id) references orders (order_id),
++    foreign key (order_id) references `order` (order_id),
+     foreign key (product_id) references product (product_id)
+ );
+ 
+Index: ../../../../cascading_style_sheets/ss8_bootstrap/practice/demo.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss8_bootstrap/practice/demo.html b/../../../../cascading_style_sheets/ss8_bootstrap/practice/demo.html
+new file mode 100644
+--- /dev/null	(date 1672147524483)
++++ b/../../../../cascading_style_sheets/ss8_bootstrap/practice/demo.html	(date 1672147524483)
+@@ -0,0 +1,171 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <title>Microsoft Surface</title>
++  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
++        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
++  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
++        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
++        crossorigin="anonymous" referrerpolicy="no-referrer"/>
++</head>
++<body>
++<div class="container-fluid">
++  <div class="row">
++    <nav class="navbar navbar-expand-lg navbar-light bg-light">
++      <div class="container-fluid">
++        <a class="navbar-brand" href="https://www.microsoft.com/en-us/surface"><img
++                src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
++                alt=""></a>
++        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
++                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
++                aria-expanded="false" aria-label="Toggle navigation">
++          <span class="navbar-toggler-icon"></span>
++        </button>
++        <div class="collapse navbar-collapse" id="navbarSupportedContent">
++          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
++            <li class="nav-item">
++              <a class="nav-link active" aria-current="page" href="#">Home</a>
++            </li>
++            <li class="nav-item">
++              <a class="nav-link" href="#">Computer</a>
++            </li>
++            <li class="nav-item dropdown">
++              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
++                 data-bs-toggle="dropdown" aria-expanded="false">
++                Business
++              </a>
++              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
++                <li><a class="dropdown-item" href="#">New Computer</a></li>
++                <li><a class="dropdown-item" href="#">New Laptop</a></li>
++                <li><a class="dropdown-item" href="#">All in one</a></li>
++              </ul>
++            </li>
++            <li class="nav-item">
++              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Support</a>
++            </li>
++          </ul>
++          <form class="d-flex">
++            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
++            <button class="btn btn-outline-success" type="submit">Search</button>
++          </form>
++        </div>
++      </div>
++    </nav>
++  </div>
++  <div class=" bg-image d-flex justify-content-start align-items-center"
++       style="background-image: url('https://c.s-microsoft.com/en-us/CMSImages/Surface_HP_Holiday_Hero_wave_5_red_1920x1080.jpg?version=1a595eab-fc15-693d-e500-76674b150916');
++            height: 92vh">
++    <div><p class="display-1 text-warning">Laptop design by Duc Nguyen</p></div>
++  </div>
++  <div class="row ">
++    <div class="mt-3"><h2 class="text-center text-warning">For all the ways you create</h2></div>
++    <div class="mt-3"><h2 class="text-center text-warning">Laptop <a href="https://www.microsoft.com/en-us/surface/devices/surface-laptop-models">explore
++      all Surface Laptop</a></h2></div>
++    <div class="col-md-6 d-flex ">
++      <div class="row">
++        <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1600"
++             alt="laptop">
++      </div>
++    </div>
++    <div class="col-md-6">
++      <div class="row row-cols-1 row-cols-md-2 g-4">
++        <div class="col">
++          <div class="card">
++            <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600"
++                 class="card-img-top" alt="...">
++            <div class="card-body">
++              <h5 class="card-title">New Laptop</h5>
++            </div>
++          </div>
++        </div>
++        <div class="col">
++          <div class="card">
++            <img src="https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=1600"
++                 class="card-img-top" alt="...">
++            <div class="card-body">
++              <h5 class="card-title">Old Laptop</h5>
++            </div>
++          </div>
++        </div>
++        <div class="col">
++          <div class="card">
++            <img src="https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=1600"
++                 class="card-img-top" alt="...">
++            <div class="card-body">
++              <h5 class="card-title">Laptop expensive</h5>
++            </div>
++          </div>
++        </div>
++        <div class="col">
++          <div class="card ">
++            <img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&w=1600"
++                 class="card-img-top" alt="...">
++            <div class="card-body">
++              <h5 class="card-title">Laptop cheap</h5>
++            </div>
++          </div>
++        </div>
++      </div>
++    </div>
++  </div>
++  <div class="row d-flex justify-content-center">
++    <div class="col-md-2 offset-md-1 my-3">
++      <i class="fa fa-linkedin-square fs-1 " aria-hidden="true"></i>
++      <i class="fa fa-facebook-square fs-1 mx-2" aria-hidden="true"></i>
++      <i class="fa fa-twitter-square fs-1 mx-2" aria-hidden="true"></i>
++      <i class="fa fa-instagram fs-1" aria-hidden="true"></i>
++    </div>
++  </div>
++  <div class="row bg-warning ">
++    <div class="col-md-2 offset-md-2">
++      <ul style="list-style: none">
++        <li>
++          <div class="fw-bold">What's new</div>
++        </li>
++        <li>Surface 9</li>
++        <li>Surface 8</li>
++        <li>Surface 7</li>
++        <li>Surface 6</li>
++      </ul>
++    </div>
++    <div class="col-md-2 ">
++      <ul style="list-style: none">
++        <li>
++          <div class="fw-bold">Microsoft Store</div>
++        </li>
++        <li>Store 1</li>
++        <li>Store 2</li>
++        <li>Store 3</li>
++        <li>Store 4</li>
++      </ul>
++    </div>
++    <div class="col-md-2 ">
++      <ul style="list-style: none">
++        <li>
++          <div class="fw-bold">Education</div>
++        </li>
++        <li>Microsoft 5</li>
++        <li>Microsoft 4</li>
++        <li>Microsoft 3</li>
++        <li>Microsoft 2</li>
++      </ul>
++    </div>
++    <div class="col-md-2 ">
++      <ul style="list-style: none">
++        <li>
++          <div class="fw-bold">Company</div>
++        </li>
++        <li>Careers</li>
++        <li>Products</li>
++        <li>Posts</li>
++        <li>Investors</li>
++      </ul>
++    </div>
++  </div>
++</div>
++</body>
++<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
++        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
++        crossorigin="anonymous"></script>
++</html>
+\ No newline at end of file
+Index: ../../../../casestudy/resort_furama.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../casestudy/resort_furama.html b/../../../../casestudy/resort_furama.html
+new file mode 100644
+--- /dev/null	(date 1672240966295)
++++ b/../../../../casestudy/resort_furama.html	(date 1672240966295)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
+Index: ../../../../cascading_style_sheets/ss8_bootstrap/practice/css.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../cascading_style_sheets/ss8_bootstrap/practice/css.css b/../../../../cascading_style_sheets/ss8_bootstrap/practice/css.css
+new file mode 100644
+--- /dev/null	(date 1672112541811)
++++ b/../../../../cascading_style_sheets/ss8_bootstrap/practice/css.css	(date 1672112541811)
+@@ -0,0 +1,49 @@
++html,
++body {
++    height: 100%;
++}
++
++body {
++    display: -ms-flexbox;
++    display: -webkit-box;
++    display: flex;
++    -ms-flex-align: center;
++    -ms-flex-pack: center;
++    -webkit-box-align: center;
++    align-items: center;
++    -webkit-box-pack: center;
++    justify-content: center;
++    padding-top: 40px;
++    padding-bottom: 40px;
++    background-color: #f5f5f5;
++}
++
++.form-signin {
++    width: 100%;
++    max-width: 330px;
++    padding: 15px;
++    margin: 0 auto;
++}
++.form-signin .checkbox {
++    font-weight: 400;
++}
++.form-signin .form-control {
++    position: relative;
++    box-sizing: border-box;
++    height: auto;
++    padding: 10px;
++    font-size: 16px;
++}
++.form-signin .form-control:focus {
++    z-index: 2;
++}
++.form-signin input[type="email"] {
++    margin-bottom: -1px;
++    border-bottom-right-radius: 0;
++    border-bottom-left-radius: 0;
++}
++.form-signin input[type="password"] {
++    margin-bottom: 10px;
++    border-top-left-radius: 0;
++    border-top-right-radius: 0;
++}
+\ No newline at end of file
+Index: ../../../../casestudy_web_back_end/resort_furama.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Resort FURAMA</title>\r\n    <link rel=\"stylesheet\" href=\"../bootstrap-5.3.0-alpha1-dist/css/bootstrap.css\">\r\n\r\n</head>\r\n<body>\r\n<div class=\"row m-lg-1 bg-gray \">\r\n    <div class=\"col-md-2 d-flex justify-content-center  \">\r\n        <div>\r\n            <img src=\"https://furamavietnam.com/wp-content/uploads/2018/08/logo.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-2\"></div>\r\n    <div class=\"col-md-3 \">\r\n        <span>\r\n103 - 105 Vo Nguyen Giap Street, Khue My Ward, Ngu Hanh Son District, Danang City, Vietnam\r\n\r\n7,0 km from Danang Airport</span>\r\n    </div>\r\n    <div class=\"col-md-3\">\r\n        <span>84-236-3847 333/888\r\nreservation@furamavietnam.com\r\n        </span></div>\r\n    <div class=\"col-md-2 d-flex justify-content-center align-items-center\">\r\n        <p>Trần Ngọc Vũ</p>\r\n    </div>\r\n</div>\r\n<div class=\"row bg-body-tertiary\">\r\n    <div class=\"col-md-12 d-flex justify-content-center\">\r\n        <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">\r\n            <div class=\"container-fluid\">\r\n                <a class=\"navbar-brand\" href=\"#\">Home</a>\r\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"\r\n                        data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\r\n                        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n                    <span class=\"navbar-toggler-icon\"></span>\r\n                </button>\r\n                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n                    <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\r\n                        <li class=\"nav-item dropdown\">\r\n                            <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\"\r\n                               aria-expanded=\"false\">\r\n                                Employee\r\n                            </a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                                <li>\r\n                                    <hr class=\"dropdown-divider\">\r\n                                </li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                            </ul>\r\n                        </li>\r\n                        <li class=\"nav-item dropdown\">\r\n                            <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\"\r\n                               aria-expanded=\"false\">\r\n                                Customer\r\n                            </a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                                <li>\r\n                                    <hr class=\"dropdown-divider\">\r\n                                </li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                            </ul>\r\n                        </li>\r\n                        <li class=\"nav-item dropdown\">\r\n                            <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\"\r\n                               aria-expanded=\"false\">\r\n                                Service\r\n                            </a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                                <li>\r\n                                    <hr class=\"dropdown-divider\">\r\n                                </li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                            </ul>\r\n                        </li>\r\n                        <li class=\"nav-item dropdown\">\r\n                            <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\"\r\n                               aria-expanded=\"false\">\r\n                                Contract\r\n                            </a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\r\n                                <li>\r\n                                    <hr class=\"dropdown-divider\">\r\n                                </li>\r\n                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\r\n                            </ul>\r\n                        </li>\r\n                    </ul>\r\n                    <form class=\"d-flex\" role=\"search\">\r\n                        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n                        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n    </div>\r\n\r\n</div>\r\n<div class=\"row \">\r\n    <div class=\"col-md-2 h-100\">\r\n        <ul class=\"list-group vh-100 overflow-scroll\">\r\n            <li class=\"list-group-item\" aria-current=\"true\">An active item</li>\r\n            <li class=\"list-group-item\">A second item</li>\r\n            <li class=\"list-group-item\">A third item</li>\r\n            <li class=\"list-group-item\">A fourth item</li>\r\n        </ul>\r\n    </div>\r\n    <div class=\"col-md-10\">\r\n        <div style=\"width: 100%;height: 100%\">\r\n            <img src=\"https://dimg04.c-ctrip.com/images/22050r000000gxait9E1E_R_1136_750_R5_D.jpg\">\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n    <div>\r\n        <footer class=\"bg-primary text-white text-center text-lg-start\">\r\n            <!-- Grid container -->\r\n            <div class=\"container p-4\">\r\n                <!--Grid row-->\r\n                <div class=\"row\">\r\n                    <!--Grid column-->\r\n                    <div class=\"col-lg-6 col-md-12 mb-4 mb-md-0\">\r\n                        <h5 class=\"text-uppercase\">Footer Content</h5>\r\n\r\n                        <p>\r\n                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis\r\n                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam\r\n                            voluptatem veniam, est atque cumque eum delectus sint!\r\n                        </p>\r\n                    </div>\r\n                    <!--Grid column-->\r\n\r\n                    <!--Grid column-->\r\n                    <div class=\"col-lg-3 col-md-6 mb-4 mb-md-0\">\r\n                        <h5 class=\"text-uppercase\">Links</h5>\r\n\r\n                        <ul class=\"list-unstyled mb-0\">\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 1</a>\r\n                            </li>\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 2</a>\r\n                            </li>\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 3</a>\r\n                            </li>\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 4</a>\r\n                            </li>\r\n                        </ul>\r\n                    </div>\r\n                    <!--Grid column-->\r\n\r\n                    <!--Grid column-->\r\n                    <div class=\"col-lg-3 col-md-6 mb-4 mb-md-0\">\r\n                        <h5 class=\"text-uppercase mb-0\">Links</h5>\r\n\r\n                        <ul class=\"list-unstyled\">\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 1</a>\r\n                            </li>\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 2</a>\r\n                            </li>\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 3</a>\r\n                            </li>\r\n                            <li>\r\n                                <a href=\"#!\" class=\"text-white\">Link 4</a>\r\n                            </li>\r\n                        </ul>\r\n                    </div>\r\n                    <!--Grid column-->\r\n                </div>\r\n                <!--Grid row-->\r\n            </div>\r\n            <!-- Grid container -->\r\n\r\n            <!-- Copyright -->\r\n            <div class=\"text-center p-3\" style=\"background-color: rgba(0, 0, 0, 0.2);\">\r\n                © 2020 Copyright:\r\n                <a class=\"text-white\" href=\"https://mdbootstrap.com/\">MDBootstrap.com</a>\r\n            </div>\r\n            <!-- Copyright -->\r\n        </footer>\r\n    </div>\r\n</div>\r\n<script src=\"../bootstrap-5.3.0-alpha1-dist/js/bootstrap.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../casestudy_web_back_end/resort_furama.html b/../../../../casestudy_web_back_end/resort_furama.html
+--- a/../../../../casestudy_web_back_end/resort_furama.html	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../casestudy_web_back_end/resort_furama.html	(date 1672372189313)
+@@ -3,199 +3,201 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Resort FURAMA</title>
+-    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+-
++    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ </head>
+ <body>
+-<div class="row m-lg-1 bg-gray ">
+-    <div class="col-md-2 d-flex justify-content-center  ">
+-        <div>
+-            <img src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png">
+-        </div>
+-    </div>
+-    <div class="col-md-2"></div>
+-    <div class="col-md-3 ">
++<div class="container-fluid">
++    <div class="row m-lg-1 bg-gray ">
++        <div class="col-md-2 d-flex justify-content-center  ">
++            <div>
++                <img src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png">
++            </div>
++        </div>
++        <div class="col-md-2"></div>
++        <div class="col-md-3 ">
+         <span>
+ 103 - 105 Vo Nguyen Giap Street, Khue My Ward, Ngu Hanh Son District, Danang City, Vietnam
+ 
+ 7,0 km from Danang Airport</span>
+-    </div>
+-    <div class="col-md-3">
++        </div>
++        <div class="col-md-3">
+         <span>84-236-3847 333/888
+ reservation@furamavietnam.com
+         </span></div>
+-    <div class="col-md-2 d-flex justify-content-center align-items-center">
+-        <p>Trần Ngọc Vũ</p>
+-    </div>
+-</div>
+-<div class="row bg-body-tertiary">
+-    <div class="col-md-12 d-flex justify-content-center">
+-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+-            <div class="container-fluid">
+-                <a class="navbar-brand" href="#">Home</a>
+-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+-                        aria-expanded="false" aria-label="Toggle navigation">
+-                    <span class="navbar-toggler-icon"></span>
+-                </button>
+-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+-                        <li class="nav-item dropdown">
+-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+-                               aria-expanded="false">
+-                                Employee
+-                            </a>
+-                            <ul class="dropdown-menu">
+-                                <li><a class="dropdown-item" href="#">Action</a></li>
+-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+-                                <li>
+-                                    <hr class="dropdown-divider">
+-                                </li>
+-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+-                            </ul>
+-                        </li>
+-                        <li class="nav-item dropdown">
+-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+-                               aria-expanded="false">
+-                                Customer
+-                            </a>
+-                            <ul class="dropdown-menu">
+-                                <li><a class="dropdown-item" href="#">Action</a></li>
+-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+-                                <li>
+-                                    <hr class="dropdown-divider">
+-                                </li>
+-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+-                            </ul>
+-                        </li>
+-                        <li class="nav-item dropdown">
+-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+-                               aria-expanded="false">
+-                                Service
+-                            </a>
+-                            <ul class="dropdown-menu">
+-                                <li><a class="dropdown-item" href="#">Action</a></li>
+-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+-                                <li>
+-                                    <hr class="dropdown-divider">
+-                                </li>
+-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+-                            </ul>
+-                        </li>
+-                        <li class="nav-item dropdown">
+-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+-                               aria-expanded="false">
+-                                Contract
+-                            </a>
+-                            <ul class="dropdown-menu">
+-                                <li><a class="dropdown-item" href="#">Action</a></li>
+-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+-                                <li>
+-                                    <hr class="dropdown-divider">
+-                                </li>
+-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+-                            </ul>
+-                        </li>
+-                    </ul>
+-                    <form class="d-flex" role="search">
+-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+-                        <button class="btn btn-outline-success" type="submit">Search</button>
+-                    </form>
+-                </div>
+-            </div>
+-        </nav>
+-    </div>
++        <div class="col-md-2 d-flex justify-content-center align-items-center">
++            <p>Trần Ngọc Vũ</p>
++        </div>
++    </div>
++    <div class="row bg-body-tertiary">
++        <div class="col-md-12 d-flex justify-content-center">
++            <nav class="navbar navbar-expand-lg bg-body-tertiary">
++                <div class="container-fluid">
++                    <a class="navbar-brand" href="#">Home</a>
++                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
++                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
++                            aria-expanded="false" aria-label="Toggle navigation">
++                        <span class="navbar-toggler-icon"></span>
++                    </button>
++                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
++                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
++                            <li class="nav-item dropdown">
++                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
++                                   aria-expanded="false">
++                                    Employee
++                                </a>
++                                <ul class="dropdown-menu">
++                                    <li><a class="dropdown-item" href="#">Action</a></li>
++                                    <li><a class="dropdown-item" href="#">Another action</a></li>
++                                    <li>
++                                        <hr class="dropdown-divider">
++                                    </li>
++                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
++                                </ul>
++                            </li>
++                            <li class="nav-item dropdown">
++                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
++                                   aria-expanded="false">
++                                    Customer
++                                </a>
++                                <ul class="dropdown-menu">
++                                    <li><a class="dropdown-item" href="#">Action</a></li>
++                                    <li><a class="dropdown-item" href="#">Another action</a></li>
++                                    <li>
++                                        <hr class="dropdown-divider">
++                                    </li>
++                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
++                                </ul>
++                            </li>
++                            <li class="nav-item dropdown">
++                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
++                                   aria-expanded="false">
++                                    Service
++                                </a>
++                                <ul class="dropdown-menu">
++                                    <li><a class="dropdown-item" href="#">Action</a></li>
++                                    <li><a class="dropdown-item" href="#">Another action</a></li>
++                                    <li>
++                                        <hr class="dropdown-divider">
++                                    </li>
++                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
++                                </ul>
++                            </li>
++                            <li class="nav-item dropdown">
++                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
++                                   aria-expanded="false">
++                                    Contract
++                                </a>
++                                <ul class="dropdown-menu">
++                                    <li><a class="dropdown-item" href="#">Action</a></li>
++                                    <li><a class="dropdown-item" href="#">Another action</a></li>
++                                    <li>
++                                        <hr class="dropdown-divider">
++                                    </li>
++                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
++                                </ul>
++                            </li>
++                        </ul>
++                        <form class="d-flex" role="search">
++                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
++                            <button class="btn btn-outline-success" type="submit">Search</button>
++                        </form>
++                    </div>
++                </div>
++            </nav>
++        </div>
+ 
+-</div>
+-<div class="row ">
+-    <div class="col-md-2 h-100">
+-        <ul class="list-group vh-100 overflow-scroll">
+-            <li class="list-group-item" aria-current="true">An active item</li>
+-            <li class="list-group-item">A second item</li>
+-            <li class="list-group-item">A third item</li>
+-            <li class="list-group-item">A fourth item</li>
+-        </ul>
+-    </div>
+-    <div class="col-md-10">
+-        <div style="width: 100%;height: 100%">
+-            <img src="https://dimg04.c-ctrip.com/images/22050r000000gxait9E1E_R_1136_750_R5_D.jpg">
+-        </div>
+-    </div>
+-</div>
+-<div class="row">
+-    <div>
+-        <footer class="bg-primary text-white text-center text-lg-start">
+-            <!-- Grid container -->
+-            <div class="container p-4">
+-                <!--Grid row-->
+-                <div class="row">
+-                    <!--Grid column-->
+-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+-                        <h5 class="text-uppercase">Footer Content</h5>
++    </div>
++    <div class="row ">
++        <div class="col-md-2 h-100">
++            <ul class="list-group vh-100 overflow-scroll">
++                <li class="list-group-item" aria-current="true">An active item</li>
++                <li class="list-group-item">A second item</li>
++                <li class="list-group-item">A third item</li>
++                <li class="list-group-item">A fourth item</li>
++            </ul>
++        </div>
++        <div class="col-md-10">
++            <div style="width: 100%;height: 100%">
++                <img src="https://dimg04.c-ctrip.com/images/22050r000000gxait9E1E_R_1136_750_R5_D.jpg">
++            </div>
++        </div>
++    </div>
++    <div class="row">
++        <div>
++            <footer class="bg-primary text-white text-center text-lg-start">
++                <!-- Grid container -->
++                <div class="container p-4">
++                    <!--Grid row-->
++                    <div class="row">
++                        <!--Grid column-->
++                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
++                            <h5 class="text-uppercase">Footer Content</h5>
+ 
+-                        <p>
+-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+-                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+-                            voluptatem veniam, est atque cumque eum delectus sint!
+-                        </p>
+-                    </div>
+-                    <!--Grid column-->
++                            <p>
++                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
++                                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
++                                voluptatem veniam, est atque cumque eum delectus sint!
++                            </p>
++                        </div>
++                        <!--Grid column-->
+ 
+-                    <!--Grid column-->
+-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+-                        <h5 class="text-uppercase">Links</h5>
++                        <!--Grid column-->
++                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
++                            <h5 class="text-uppercase">Links</h5>
+ 
+-                        <ul class="list-unstyled mb-0">
+-                            <li>
+-                                <a href="#!" class="text-white">Link 1</a>
+-                            </li>
+-                            <li>
+-                                <a href="#!" class="text-white">Link 2</a>
+-                            </li>
+-                            <li>
+-                                <a href="#!" class="text-white">Link 3</a>
+-                            </li>
+-                            <li>
+-                                <a href="#!" class="text-white">Link 4</a>
+-                            </li>
+-                        </ul>
+-                    </div>
+-                    <!--Grid column-->
++                            <ul class="list-unstyled mb-0">
++                                <li>
++                                    <a href="#!" class="text-white">Link 1</a>
++                                </li>
++                                <li>
++                                    <a href="#!" class="text-white">Link 2</a>
++                                </li>
++                                <li>
++                                    <a href="#!" class="text-white">Link 3</a>
++                                </li>
++                                <li>
++                                    <a href="#!" class="text-white">Link 4</a>
++                                </li>
++                            </ul>
++                        </div>
++                        <!--Grid column-->
+ 
+-                    <!--Grid column-->
+-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+-                        <h5 class="text-uppercase mb-0">Links</h5>
++                        <!--Grid column-->
++                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
++                            <h5 class="text-uppercase mb-0">Links</h5>
+ 
+-                        <ul class="list-unstyled">
+-                            <li>
+-                                <a href="#!" class="text-white">Link 1</a>
+-                            </li>
+-                            <li>
+-                                <a href="#!" class="text-white">Link 2</a>
+-                            </li>
+-                            <li>
+-                                <a href="#!" class="text-white">Link 3</a>
+-                            </li>
+-                            <li>
+-                                <a href="#!" class="text-white">Link 4</a>
+-                            </li>
+-                        </ul>
+-                    </div>
+-                    <!--Grid column-->
+-                </div>
+-                <!--Grid row-->
+-            </div>
+-            <!-- Grid container -->
++                            <ul class="list-unstyled">
++                                <li>
++                                    <a href="#!" class="text-white">Link 1</a>
++                                </li>
++                                <li>
++                                    <a href="#!" class="text-white">Link 2</a>
++                                </li>
++                                <li>
++                                    <a href="#!" class="text-white">Link 3</a>
++                                </li>
++                                <li>
++                                    <a href="#!" class="text-white">Link 4</a>
++                                </li>
++                            </ul>
++                        </div>
++                        <!--Grid column-->
++                    </div>
++                    <!--Grid row-->
++                </div>
++                <!-- Grid container -->
+ 
+-            <!-- Copyright -->
+-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+-                © 2020 Copyright:
+-                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+-            </div>
+-            <!-- Copyright -->
+-        </footer>
++                <!-- Copyright -->
++                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
++                    © 2022 Copyright:
++                    <a class="text-white" href="https://mdbootstrap.com/">VuTN.com</a>
++                </div>
++                <!-- Copyright -->
++            </footer>
++        </div>
+     </div>
+ </div>
+-<script src="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+ </body>
++
+ </html>
+\ No newline at end of file
+Index: ../../../../mysql/casestudy_1/query_16_20.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>use\r\nfurama_management;\r\n \r\n -- 16.\tXóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.\r\n \r\n set\r\nsql_safe_updates= 0;\r\ndelete\r\nfrom nhan_vien nv\r\nwhere nv.ma_nhan_vien not in (select hd.ma_nhan_vien\r\n    from hop_dong hd\r\n    where year (\r\n    ngay_lam_hop_dong) in (2019, 2020 , 2021));\r\nselect *\r\nfrom nhan_vien;\r\nset\r\nsql_safe_updates= 1;\r\n \r\n-- 17.\tCập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond,\r\n-- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ\r\n\r\nset\r\nsql_safe_updates= 0;\r\nupdate khach_hang\r\nset ma_loai_khach = 1\r\nwhere khach_hang.ma_loai_khach = 2\r\n      and khach_hang.ma_khach_hang in (select *\r\n      from (select kh.ma_khach_hang\r\n      from khach_hang kh\r\n      left join loai_khach lk on kh.ma_loai_khach = lk.ma_loai_khach\r\n      left join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang\r\n      left join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu\r\n      left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong\r\n      left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem\r\n      where year (ngay_lam_hop_dong) =2021\r\n      group by kh.ma_khach_hang\r\n      having sum (chi_phi_thue + so_luong * gia) >1000000) chi_tiet_khach_hang);\r\nselect *\r\nfrom khach_hang;\r\nset\r\nsql_safe_updates= 1;\r\n  \r\n  -- 18.Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).\r\n  \r\n  set\r\nsql_safe_updates= 0;\r\ndelete\r\nfrom khach_hang kh\r\nwhere kh.ma_khach_hang in (select *\r\n    from (select hd.ma_khach_hang\r\n    from hop_dong hd\r\n    where year (ngay_lam_hop_dong) < 2021) a);\r\nselect *\r\nfrom khach_hang;\r\nset\r\nsql_safe_updates= 1;\r\n  \r\n  -- 19.Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.\r\n  \r\n  set\r\nsql_safe_updates= 0;\r\nupdate dich_vu_di_kem\r\nset gia = gia * 2\r\nwhere dich_vu_di_kem.ma_dich_vu_di_kem in (select *\r\n         from (select dvdk.ma_dich_vu_di_kem\r\n         from dich_vu_di_kem dvdk\r\n         join hop_dong_chi_tiet hdct\r\n         on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem\r\n         join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong\r\n         where year (ngay_lam_hop_dong) = 2020\r\n         group by dvdk.ma_dich_vu_di_kem\r\n         having sum ( so_luong) >10) a);\r\nselect *\r\nfrom dich_vu_di_kem;\r\nset\r\nsql_safe_updates= 1;\r\n\r\n  -- 20.\tHiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,\r\n  -- thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.\r\n\r\nselect ma_nhan_vien, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi\r\nfrom nhan_vien\r\nunion\r\nselect ma_khach_hang, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi\r\nfrom khach_hang;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../mysql/casestudy_1/query_16_20.sql b/../../../../mysql/casestudy_1/query_16_20.sql
+--- a/../../../../mysql/casestudy_1/query_16_20.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../mysql/casestudy_1/query_16_20.sql	(date 1671683861594)
+@@ -24,19 +24,27 @@
+ update khach_hang
+ set ma_loai_khach = 1
+ where khach_hang.ma_loai_khach = 2
+-      and khach_hang.ma_khach_hang in (select *
+-      from (select kh.ma_khach_hang
+-      from khach_hang kh
+-      left join loai_khach lk on kh.ma_loai_khach = lk.ma_loai_khach
+-      left join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
+-      left join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
+-      left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+-      left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+-      where year (ngay_lam_hop_dong) =2021
+-      group by kh.ma_khach_hang
+-      having sum (chi_phi_thue + so_luong * gia) >1000000) chi_tiet_khach_hang);
+-select *
+-from khach_hang;
++and 
++khach_hang.ma_khach_hang in (select tt.ma_khach_hang from view_tong_tien tt
++where tt.tong_tien >1000000);
++
++select *
++from khach_hang;
++     
++     create view view_tong_tien as
++      select ghd.ma_khach_hang, sum( ghd.gia) as tong_tien 
++      from view_gia_hop_dong ghd
++      group by ma_khach_hang;
++      
++      create view view_gia_hop_dong as
++      select hd.* , ifnull(chi_phi_thue,0) + sum(ifnull(so_luong,0)  * ifnull(gia,0) ) as gia
++      from hop_dong hd
++       left join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
++       left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
++       left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
++       where year(ngay_lam_hop_dong) =2021
++      group by hd.ma_hop_dong;
++
+ set
+ sql_safe_updates= 1;
+   
+@@ -69,7 +77,7 @@
+          join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+          where year (ngay_lam_hop_dong) = 2020
+          group by dvdk.ma_dich_vu_di_kem
+-         having sum ( so_luong) >10) a);
++         having sum( so_luong) >10) a);
+ select *
+ from dich_vu_di_kem;
+ set
+Index: ../../../../mysql/casestudy_1/create_table.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>create\r\ndatabase furama_management;\r\nuse\r\nfurama_management;\r\n\r\ncreate table vi_tri\r\n(\r\n    ma_vi_tri  int primary key,\r\n    ten_vi_tri varchar(45)\r\n);\r\n\r\ncreate table trinh_do\r\n(\r\n    ma_trinh_do  int primary key,\r\n    ten_trinh_do varchar(45)\r\n);\r\n\r\ncreate table bo_phan\r\n(\r\n    ma_bo_phan  int primary key,\r\n    ten_bo_phan varchar(45)\r\n);\r\n\r\ncreate table nhan_vien\r\n(\r\n    ma_nhan_vien  int primary key,\r\n    ho_ten        varchar(45),\r\n    ngay_sinh     date,\r\n    so_cmnd       varchar(45),\r\n    luong         double,\r\n    so_dien_thoai varchar(45),\r\n    email         varchar(45),\r\n    dia_chi       varchar(45),\r\n    ma_vi_tri     int,\r\n    ma_trinh_do   int,\r\n    ma_bo_phan    int,\r\n    foreign key (ma_vi_tri) references vi_tri(ma_vi_tri),\r\n\tforeign key (ma_trinh_do) references trinh_do(ma_trinh_do),\r\n\tforeign key (ma_bo_phan) references bo_phan(ma_bo_phan)\r\n);\r\n\r\ncreate table loai_khach\r\n(\r\n    ma_loai_khach  int primary key,\r\n    ten_loai_khach varchar(45)\r\n);\r\n\r\ncreate table khach_hang\r\n(\r\n    ma_khach_hang int primary key,\r\n    ma_loai_khach int,\r\n    ho_ten        varchar(45),\r\n    ngay_sinh     date,\r\n    gioi_tinh     bit(1),\r\n    so_cmnd       varchar(45),\r\n    so_dien_thoai varchar(45),\r\n    email         varchar(45),\r\n    dia_chi       varchar(45),\r\n\tforeign key(ma_loai_khach) references loai_khach(ma_loai_khach)\r\n);\r\n\r\ncreate table loai_dich_vu\r\n(\r\n    ma_loai_dich_vu  int primary key,\r\n    ten_loai_dich_vu varchar(45)\r\n);\r\n\r\ncreate table kieu_thue\r\n(\r\n    ma_kieu_thue  int primary key,\r\n    ten_kieu_thue varchar(45)\r\n);\r\n\r\ncreate table dich_vu\r\n(\r\n    ma_dich_vu              int primary key,\r\n    ten_dich_vu             varchar(45),\r\n    dien_tich               int,\r\n    chi_phi_thue            double,\r\n    so_nguoi_toi_da         int,\r\n    ma_kieu_thue            int,\r\n    ma_loai_dich_vu         int,\r\n    tieu_chuan_phong        varchar(45),\r\n    mo_ta_tien_nghi_khac    varchar(45),\r\n    dien_tich_ho_boi        double,\r\n    so_tang                 int,\r\n    dich_vu_mien_phi_di_kem text,\r\n    foreign key(ma_loai_dich_vu) references loai_dich_vu(ma_loai_dich_vu),\r\n    foreign key(ma_kieu_thue) references kieu_thue(ma_kieu_thue)\r\n);\r\n\r\ncreate table hop_dong\r\n(\r\n    ma_hop_dong       int primary key,\r\n    ngay_lam_hop_dong datetime,\r\n    ngay_ket_thuc     datetime,\r\n    tien_dat_coc      double,\r\n    ma_nhan_vien      int,\r\n    ma_khach_hang     int,\r\n    ma_dich_vu        int,\r\n    foreign key (ma_nhan_vien) references nhan_vien(ma_nhan_vien),\r\n    foreign key(ma_khach_hang) references khach_hang(ma_khach_hang),\r\n    foreign key(ma_dich_vu) references dich_vu(ma_dich_vu)\r\n);\r\n\r\ncreate table dich_vu_di_kem\r\n(\r\n    ma_dich_vu_di_kem  int primary key,\r\n    ten_dich_vu_di_kem varchar(45),\r\n    gia                double,\r\n    don_vi             varchar(45),\r\n    trang_thai         varchar(45)\r\n);\r\n\r\ncreate table hop_dong_chi_tiet\r\n(\r\n    ma_hop_dong_chi_tiet int primary key,\r\n    ma_hop_dong          int,\r\n    ma_dich_vu_di_kem    int,\r\n    so_luong             int,\r\n    foreign key(ma_dich_vu_di_kem) references dich_vu_di_kem(ma_dich_vu_di_kem),\r\n    foreign key(ma_hop_dong) references hop_dong(ma_hop_dong)\r\n);\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../mysql/casestudy_1/create_table.sql b/../../../../mysql/casestudy_1/create_table.sql
+--- a/../../../../mysql/casestudy_1/create_table.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../mysql/casestudy_1/create_table.sql	(date 1671683874019)
+@@ -34,9 +34,9 @@
+     ma_vi_tri     int,
+     ma_trinh_do   int,
+     ma_bo_phan    int,
+-    foreign key (ma_vi_tri) references vi_tri(ma_vi_tri),
+-	foreign key (ma_trinh_do) references trinh_do(ma_trinh_do),
+-	foreign key (ma_bo_phan) references bo_phan(ma_bo_phan)
++    foreign key (ma_vi_tri) references vi_tri(ma_vi_tri) on delete set null,
++	foreign key (ma_trinh_do) references trinh_do(ma_trinh_do) on delete set null,
++	foreign key (ma_bo_phan) references bo_phan(ma_bo_phan) on delete set null
+ );
+ 
+ create table loai_khach
+@@ -56,7 +56,7 @@
+     so_dien_thoai varchar(45),
+     email         varchar(45),
+     dia_chi       varchar(45),
+-	foreign key(ma_loai_khach) references loai_khach(ma_loai_khach)
++	foreign key(ma_loai_khach) references loai_khach(ma_loai_khach) on delete set null
+ );
+ 
+ create table loai_dich_vu
+@@ -85,8 +85,8 @@
+     dien_tich_ho_boi        double,
+     so_tang                 int,
+     dich_vu_mien_phi_di_kem text,
+-    foreign key(ma_loai_dich_vu) references loai_dich_vu(ma_loai_dich_vu),
+-    foreign key(ma_kieu_thue) references kieu_thue(ma_kieu_thue)
++    foreign key(ma_loai_dich_vu) references loai_dich_vu(ma_loai_dich_vu) on delete set null,
++    foreign key(ma_kieu_thue) references kieu_thue(ma_kieu_thue) on delete set null
+ );
+ 
+ create table hop_dong
+@@ -98,9 +98,9 @@
+     ma_nhan_vien      int,
+     ma_khach_hang     int,
+     ma_dich_vu        int,
+-    foreign key (ma_nhan_vien) references nhan_vien(ma_nhan_vien),
+-    foreign key(ma_khach_hang) references khach_hang(ma_khach_hang),
+-    foreign key(ma_dich_vu) references dich_vu(ma_dich_vu)
++    foreign key (ma_nhan_vien) references nhan_vien(ma_nhan_vien) on delete set null,
++    foreign key(ma_khach_hang) references khach_hang(ma_khach_hang) on delete set null,
++    foreign key(ma_dich_vu) references dich_vu(ma_dich_vu) on delete set null
+ );
+ 
+ create table dich_vu_di_kem
+@@ -118,16 +118,6 @@
+     ma_hop_dong          int,
+     ma_dich_vu_di_kem    int,
+     so_luong             int,
+-    foreign key(ma_dich_vu_di_kem) references dich_vu_di_kem(ma_dich_vu_di_kem),
+-    foreign key(ma_hop_dong) references hop_dong(ma_hop_dong)
++    foreign key(ma_dich_vu_di_kem) references dich_vu_di_kem(ma_dich_vu_di_kem) on delete set null,
++    foreign key(ma_hop_dong) references hop_dong(ma_hop_dong) on delete set null
+ );
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Index: ../../../../mysql/casestudy_1/query_11_15.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>use\r\nfurama_management;\r\n \r\n -- 11.\tHiển thị thông tin các dịch vụ đi kèm đã được sử dụng bởi những khách hàng \r\n-- có ten_loai_khach là “Diamond” và có dia_chi ở “Vinh” hoặc “Quảng Ngãi”.\r\n\r\nselect dvdk.*\r\nfrom dich_vu_di_kem dvdk\r\n         left join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem\r\n         left join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong\r\n         left join khach_hang kh on kh.ma_khach_hang = hd.ma_khach_hang\r\n         left join loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach\r\nwhere lk.ten_loai_khach like \"Diamond\"\r\n  and (kh.dia_chi like \"% Vinh\" or kh.dia_chi like \"% Quảng Ngãi\");\r\n\r\n-- 12.\tHiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng), ten_dich_vu,\r\n-- so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem), tien_dat_coc của tất cả các dịch vụ đã từng\r\n-- được khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.\r\n\r\nselect hd.ma_hop_dong,\r\n       nv.ho_ten        as ten_nhan_vien,\r\n       kh.ho_ten        as ten_khach_hang,\r\n       kh.so_dien_thoai as so_dien_thoai_khach_hang,\r\n       dv.ten_dich_vu,\r\n       sum(hdct.so_luong),\r\n       hd.tien_dat_coc\r\nfrom hop_dong hd\r\n         join nhan_vien nv on hd.ma_nhan_vien = nv.ma_nhan_vien\r\n         join khach_hang kh on kh.ma_khach_hang = hd.ma_khach_hang\r\n         join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu\r\n         join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong\r\nwhere hd.ma_hop_dong not in (select hd.ma_hop_dong\r\n                             from hop_dong hd\r\n                             where quarter(ngay_lam_hop_dong) in (1, 2)\r\n                                       and year (\r\n    ngay_lam_hop_dong) =2021)\r\n  and hd.ma_hop_dong in (\r\nselect hd.ma_hop_dong\r\nfrom hop_dong hd\r\nwhere quarter(hd.ngay_lam_hop_dong) = 4\r\n  and year (ngay_lam_hop_dong) =2020)\r\ngroup by hd.ma_hop_dong;\r\n\r\n-- 13.\tHiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.\r\n-- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).\r\nselect dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem, sum(hdct.so_luong) as so_luong_dich_vu_di_kem\r\nfrom dich_vu_di_kem dvdk\r\n         join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem\r\ngroup by dvdk.ma_dich_vu_di_kem\r\nhaving so_luong_dich_vu_di_kem = (select max(so_luong) from hop_dong_chi_tiet);\r\n\r\n-- 14.\tHiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. \r\n-- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung \r\n-- (được tính dựa trên việc count các ma_dich_vu_di_kem).\r\n\r\nselect hdct.ma_hop_dong,\r\n       ldv.ten_loai_dich_vu,\r\n       dvdk.ten_dich_vu_di_kem,\r\n       sum(hdct.so_luong) as so_luong_dich_vu_di_kem\r\nfrom dich_vu_di_kem dvdk\r\n         join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem\r\n         join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong\r\n         join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu\r\n         join loai_dich_vu ldv on ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu\r\ngroup by dvdk.ma_dich_vu_di_kem, hd.ma_hop_dong\r\nhaving so_luong_dich_vu_di_kem = 1;\r\n\r\n-- 15.\tHiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai,\r\n-- dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.\r\n\r\nselect nv.ma_nhan_vien,\r\n       nv.ho_ten,\r\n       td.ten_trinh_do,\r\n       bp.ten_bo_phan,\r\n       nv.so_dien_thoai,\r\n       nv.dia_chi,\r\n       count(hd.ma_hop_dong)\r\nfrom nhan_vien nv\r\n         join bo_phan bp on bp.ma_bo_phan = nv.ma_bo_phan\r\n         join trinh_do td on td.ma_trinh_do = nv.ma_trinh_do\r\n         join hop_dong hd on hd.ma_nhan_vien = nv.ma_nhan_vien\r\nwhere nv.ma_nhan_vien in (select hd.ma_nhan_vien\r\n                          from hop_dong hd\r\n                          where year (\r\n    ngay_lam_hop_dong) = 2020\r\n   or year (ngay_lam_hop_dong) = 2021\r\n    )\r\ngroup by nv.ma_nhan_vien\r\nhaving count (hd.ma_hop_dong) <=3;\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../mysql/casestudy_1/query_11_15.sql b/../../../../mysql/casestudy_1/query_11_15.sql
+--- a/../../../../mysql/casestudy_1/query_11_15.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../mysql/casestudy_1/query_11_15.sql	(date 1671610735065)
+@@ -1,5 +1,4 @@
+-use
+-furama_management;
++ use furama_management;
+  
+  -- 11.	Hiển thị thông tin các dịch vụ đi kèm đã được sử dụng bởi những khách hàng 
+ -- có ten_loai_khach là “Diamond” và có dia_chi ở “Vinh” hoặc “Quảng Ngãi”.
+@@ -12,40 +11,32 @@
+          left join loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach
+ where lk.ten_loai_khach like "Diamond"
+   and (kh.dia_chi like "% Vinh" or kh.dia_chi like "% Quảng Ngãi");
+-
++  
+ -- 12.	Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng), ten_dich_vu,
+--- so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem), tien_dat_coc của tất cả các dịch vụ đã từng
++ -- so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem), tien_dat_coc của tất cả các dịch vụ đã từng 
+ -- được khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
+ 
+-select hd.ma_hop_dong,
+-       nv.ho_ten        as ten_nhan_vien,
+-       kh.ho_ten        as ten_khach_hang,
+-       kh.so_dien_thoai as so_dien_thoai_khach_hang,
+-       dv.ten_dich_vu,
+-       sum(hdct.so_luong),
+-       hd.tien_dat_coc
+-from hop_dong hd
+-         join nhan_vien nv on hd.ma_nhan_vien = nv.ma_nhan_vien
+-         join khach_hang kh on kh.ma_khach_hang = hd.ma_khach_hang
+-         join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
+-         join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+-where hd.ma_hop_dong not in (select hd.ma_hop_dong
+-                             from hop_dong hd
+-                             where quarter(ngay_lam_hop_dong) in (1, 2)
+-                                       and year (
+-    ngay_lam_hop_dong) =2021)
+-  and hd.ma_hop_dong in (
+-select hd.ma_hop_dong
+-from hop_dong hd
++select  hd.ma_hop_dong, nv.ho_ten as ten_nhan_vien , kh.ho_ten as ten_khach_hang , kh.so_dien_thoai as so_dien_thoai_khach_hang,
++ dv.ten_dich_vu  , sum(hdct.so_luong),  hd.tien_dat_coc from hop_dong hd 
++ join nhan_vien nv on hd.ma_nhan_vien = nv.ma_nhan_vien
++ join khach_hang kh on kh.ma_khach_hang = hd.ma_khach_hang
++ join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
++ left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
++ where hd.ma_hop_dong not in(
++select hd.ma_hop_dong from hop_dong hd
++where  quarter(ngay_lam_hop_dong) in (1,2)
++and year(ngay_lam_hop_dong) =2021)
++and hd.ma_hop_dong in (
++select hd.ma_hop_dong from hop_dong hd
+ where quarter(hd.ngay_lam_hop_dong) = 4
+-  and year (ngay_lam_hop_dong) =2020)
+-group by hd.ma_hop_dong;
++and year(ngay_lam_hop_dong) =2020)
++group by hd.ma_hop_dong; 	
+ 
+ -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
+ -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+-select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem, sum(hdct.so_luong) as so_luong_dich_vu_di_kem
+-from dich_vu_di_kem dvdk
+-         join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
++
++select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem , sum(hdct.so_luong) as so_luong_dich_vu_di_kem from dich_vu_di_kem dvdk
++join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+ group by dvdk.ma_dich_vu_di_kem
+ having so_luong_dich_vu_di_kem = (select max(so_luong) from hop_dong_chi_tiet);
+ 
+@@ -53,38 +44,29 @@
+ -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung 
+ -- (được tính dựa trên việc count các ma_dich_vu_di_kem).
+ 
+-select hdct.ma_hop_dong,
+-       ldv.ten_loai_dich_vu,
+-       dvdk.ten_dich_vu_di_kem,
+-       sum(hdct.so_luong) as so_luong_dich_vu_di_kem
+-from dich_vu_di_kem dvdk
+-         join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+-         join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+-         join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
+-         join loai_dich_vu ldv on ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+-group by dvdk.ma_dich_vu_di_kem, hd.ma_hop_dong
+-having so_luong_dich_vu_di_kem = 1;
++-- Tắt chế độ của mySQL
++SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
++-- Mở chế độ của mySQL như cũ
++ SET sql_mode=(SELECT CONCAT(@@sql_mode, ',ONLY_FULL_GROUP_BY'));
++ 
++select hdct.ma_hop_dong, ldv.ten_loai_dich_vu ,dvdk.ten_dich_vu_di_kem , count(dvdk.ma_dich_vu_di_kem) as so_lan_su_dung from dich_vu_di_kem dvdk
++join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
++join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
++join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
++join loai_dich_vu ldv on ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
++group by dvdk.ma_dich_vu_di_kem
++having so_lan_su_dung = 1;
+ 
+ -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai,
+ -- dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
+ 
+-select nv.ma_nhan_vien,
+-       nv.ho_ten,
+-       td.ten_trinh_do,
+-       bp.ten_bo_phan,
+-       nv.so_dien_thoai,
+-       nv.dia_chi,
+-       count(hd.ma_hop_dong)
+-from nhan_vien nv
+-         join bo_phan bp on bp.ma_bo_phan = nv.ma_bo_phan
+-         join trinh_do td on td.ma_trinh_do = nv.ma_trinh_do
+-         join hop_dong hd on hd.ma_nhan_vien = nv.ma_nhan_vien
+-where nv.ma_nhan_vien in (select hd.ma_nhan_vien
+-                          from hop_dong hd
+-                          where year (
+-    ngay_lam_hop_dong) = 2020
+-   or year (ngay_lam_hop_dong) = 2021
+-    )
++select nv.ma_nhan_vien, nv.ho_ten, td.ten_trinh_do,bp.ten_bo_phan, nv.so_dien_thoai, nv.dia_chi, count(hd.ma_hop_dong) as so_luong_hop_dong from nhan_vien nv
++join bo_phan bp on bp.ma_bo_phan =  nv.ma_bo_phan
++join trinh_do td on td.ma_trinh_do = nv.ma_trinh_do
++join hop_dong hd on hd.ma_nhan_vien = nv.ma_nhan_vien
++where  nv.ma_nhan_vien in( select hd.ma_nhan_vien from hop_dong hd
++where year(ngay_lam_hop_dong) = 2020
++or year(ngay_lam_hop_dong) = 2021
++)
+ group by nv.ma_nhan_vien
+-having count (hd.ma_hop_dong) <=3;
+-
++having count(hd.ma_hop_dong) <=3;
+Index: ../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>create\r\ndatabase student_management_ss4;\r\nuse\r\nstudent_management_ss4;\r\n\r\ncreate table class\r\n(\r\n    class_id   int auto_increment primary key,\r\n    class_name varchar(60) not null,\r\n    start_date datetime,\r\n    `status`   bit\r\n);\r\n\r\ncreate table student\r\n(\r\n    student_id   int auto_increment primary key,\r\n    student_name varchar(30) not null,\r\n    address      varchar(50),\r\n    phone        varchar(20),\r\n    status       bit,\r\n    class_id     int,\r\n    foreign key (class_id) references class (class_id)\r\n);\r\n\r\ncreate table subject\r\n(\r\n    sub_id   int auto_increment primary key,\r\n    sub_name varchar(30) not null,\r\n    credit   tinyint     not null default 1 check (credit >= 1),\r\n    status   bit                  default 1\r\n);\r\n\r\ncreate table mark\r\n(\r\n    mark_id    int auto_increment primary key,\r\n    sub_id     int not null,\r\n    student_id int not null,\r\n    mark       float   default 0 check ( mark between 0 and 100),\r\n    exam_time  tinyint default 1,\r\n    unique (sub_id, student_id),\r\n    foreign key (sub_id) references subject (sub_id),\r\n    foreign key (student_id) references student (student_id)\r\n);\r\n\r\ninsert into class(class_name, start_date, status)\r\nvalues ('A1', '2008-12-20', 1),\r\n       ('A2', '2008-12-22', 1),\r\n       ('B3', current_date(), 0);\r\n\r\ninsert into student(student_name, address, phone, status, class_id)\r\nvalues ('Hung', 'Ha Noi', '0912113113', 1, 1),\r\n       ('Hoa', 'Hai phong', '', 1, 1),\r\n       ('Manh', 'HCM', '0123123123', 0, 2);\r\n\r\ninsert into subject(sub_name, credit, status)\r\nvalues ('CF', 5, 1),\r\n       ('C', 6, 1),\r\n       ('HDJ', 5, 1),\r\n       ('RDBMS', 10, 1);\r\n\r\ninsert into mark(sub_id, student_id, mark, exam_time)\r\nvalues (1, 1, 8, 1),\r\n       (1, 2, 10, 2),\r\n       (2, 1, 12, 1);\r\n\r\n-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.\r\nselect *\r\nfrom subject\r\nwhere credit like (select max(credit) from subject);\r\n\r\n-- Hiển thị các thông tin môn học có điểm thi lớn nhất.\r\ncreate\r\ndatabase student_management_ss4;\r\nuse\r\nstudent_management_ss4;\r\n\r\ncreate table class\r\n(\r\n    class_id   int auto_increment primary key,\r\n    class_name varchar(60) not null,\r\n    start_date datetime,\r\n    `status`   bit\r\n);\r\n\r\ncreate table student\r\n(\r\n    student_id   int auto_increment primary key,\r\n    student_name varchar(30) not null,\r\n    address      varchar(50),\r\n    phone        varchar(20),\r\n    status       bit,\r\n    class_id     int,\r\n    foreign key (class_id) references class (class_id)\r\n);\r\n\r\ncreate table subject\r\n(\r\n    sub_id   int auto_increment primary key,\r\n    sub_name varchar(30) not null,\r\n    credit   tinyint     not null default 1 check (credit >= 1),\r\n    status   bit                  default 1\r\n);\r\n\r\ncreate table mark\r\n(\r\n    mark_id    int auto_increment primary key,\r\n    sub_id     int not null,\r\n    student_id int not null,\r\n    mark       float   default 0 check ( mark between 0 and 100),\r\n    exam_time  tinyint default 1,\r\n    unique (sub_id, student_id),\r\n    foreign key (sub_id) references subject (sub_id),\r\n    foreign key (student_id) references student (student_id)\r\n);\r\n\r\ninsert into class(class_name, start_date, status)\r\nvalues ('A1', '2008-12-20', 1),\r\n       ('A2', '2008-12-22', 1),\r\n       ('B3', current_date(), 0);\r\n\r\ninsert into student(student_name, address, phone, status, class_id)\r\nvalues ('Hung', 'Ha Noi', '0912113113', 1, 1),\r\n       ('Hoa', 'Hai phong', '', 1, 1),\r\n       ('Manh', 'HCM', '0123123123', 0, 2);\r\n\r\ninsert into subject(sub_name, credit, status)\r\nvalues ('CF', 5, 1),\r\n       ('C', 6, 1),\r\n       ('HDJ', 5, 1),\r\n       ('RDBMS', 10, 1);\r\n\r\ninsert into mark(sub_id, student_id, mark, exam_time)\r\nvalues (1, 1, 8, 1),\r\n       (1, 2, 10, 2),\r\n       (2, 1, 12, 1);\r\n\r\n-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.\r\n\r\nselect *\r\nfrom subject\r\nwhere credit like (select max(credit) from subject);\r\n\r\n-- Hiển thị các thông tin môn học có điểm thi lớn nhất.\r\n\r\nselect sub.*\r\nfrom subject sub\r\n         join mark m\r\n              on sub.sub_id = m.sub_id\r\nwhere m.mark like (select max(mark) from mark);\r\n\r\n-- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần\r\n\r\nselect s.student_id, s.student_name, avg(m.mark)\r\nfrom student s\r\n         join mark m\r\n              on s.student_id = m.student_id\r\ngroup by student_id\r\norder by avg(m.mark) desc;\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql b/../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql
+--- a/../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql	(revision d8bbdbe90620aebc57de92496e469ba0b4f4582d)
++++ b/../../../../mysql/ss4_common_functions_in_sql/exercise/common_functions_in_sql.sql	(date 1671523249777)
+@@ -64,85 +64,14 @@
+        (2, 1, 12, 1);
+ 
+ -- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
++
+ select *
+ from subject
+ where credit like (select max(credit) from subject);
+ 
+ -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
+-create
+-database student_management_ss4;
+-use
+-student_management_ss4;
+-
+-create table class
+-(
+-    class_id   int auto_increment primary key,
+-    class_name varchar(60) not null,
+-    start_date datetime,
+-    `status`   bit
+-);
+-
+-create table student
+-(
+-    student_id   int auto_increment primary key,
+-    student_name varchar(30) not null,
+-    address      varchar(50),
+-    phone        varchar(20),
+-    status       bit,
+-    class_id     int,
+-    foreign key (class_id) references class (class_id)
+-);
+-
+-create table subject
+-(
+-    sub_id   int auto_increment primary key,
+-    sub_name varchar(30) not null,
+-    credit   tinyint     not null default 1 check (credit >= 1),
+-    status   bit                  default 1
+-);
+-
+-create table mark
+-(
+-    mark_id    int auto_increment primary key,
+-    sub_id     int not null,
+-    student_id int not null,
+-    mark       float   default 0 check ( mark between 0 and 100),
+-    exam_time  tinyint default 1,
+-    unique (sub_id, student_id),
+-    foreign key (sub_id) references subject (sub_id),
+-    foreign key (student_id) references student (student_id)
+-);
+ 
+-insert into class(class_name, start_date, status)
+-values ('A1', '2008-12-20', 1),
+-       ('A2', '2008-12-22', 1),
+-       ('B3', current_date(), 0);
+-
+-insert into student(student_name, address, phone, status, class_id)
+-values ('Hung', 'Ha Noi', '0912113113', 1, 1),
+-       ('Hoa', 'Hai phong', '', 1, 1),
+-       ('Manh', 'HCM', '0123123123', 0, 2);
+-
+-insert into subject(sub_name, credit, status)
+-values ('CF', 5, 1),
+-       ('C', 6, 1),
+-       ('HDJ', 5, 1),
+-       ('RDBMS', 10, 1);
+-
+-insert into mark(sub_id, student_id, mark, exam_time)
+-values (1, 1, 8, 1),
+-       (1, 2, 10, 2),
+-       (2, 1, 12, 1);
+-
+--- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
+-
+-select *
+-from subject
+-where credit like (select max(credit) from subject);
+-
+--- Hiển thị các thông tin môn học có điểm thi lớn nhất.
+-
+-select sub.*
++select sub.*,  m.mark
+ from subject sub
+          join mark m
+               on sub.sub_id = m.sub_id
+@@ -150,7 +79,7 @@
+ 
+ -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
+ 
+-select s.student_id, s.student_name, avg(m.mark)
++select s.*, avg(m.mark) as diem_trung_binh
+ from student s
+          join mark m
+               on s.student_id = m.student_id

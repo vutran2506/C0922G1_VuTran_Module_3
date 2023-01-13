@@ -5,7 +5,7 @@ create table positions (
 position_id int  primary key,
 name varchar(45)
 );
-
+select* from positions;
 create table education_degree (
 education_degree_id int auto_increment primary key,
 name varchar(45)
@@ -15,6 +15,7 @@ create table division(
 division_id int auto_increment primary key,
 name varchar(45)
 );
+select * from division;
 
 insert into positions (position_id, name) 
 values 
@@ -24,6 +25,7 @@ values
   (4, 'Giám sát'), 
   (5, 'Quản lý'), 
   (6, 'Giám đốc');
+  select * from division;
 insert into education_degree (education_degree_id, name) 
 values 
   (1, 'Trung cấp'), 
@@ -49,9 +51,9 @@ employee_id int auto_increment  primary key,
  position_id int,
  education_degree_id int,
 division_id int,
-foreign key (position_id) references positions(position_id) ,
-foreign key (education_degree_id) references education_degree(education_degree_id),
-foreign key (division_id) references division (division_id)
+foreign key (position_id) references positions(position_id) on delete set null,
+foreign key (education_degree_id) references education_degree(education_degree_id) on delete set null,
+foreign key (division_id) references division (division_id) on delete set null
 );
 
 INSERT INTO employee 
@@ -117,6 +119,12 @@ VALUES
     2, 3, 2
   );
   
+  
+  select e.* ,ed.name as name_education ,p.name as name_position ,d.name name_division from employee e
+  join education_degree ed on e.education_degree_id = ed.education_degree_id
+  join division d on e.division_id = d.division_id
+  join positions p on  e.position_id = p.position_id;
+  
 create table customer_type(
 customer_type_id int auto_increment primary key,
 name varchar(45)
@@ -142,7 +150,7 @@ id_card varchar(45),
 phone_number varchar(45),
 email varchar(45),
 address varchar(45),
-foreign key (customer_type_id) references customer_type (customer_type_id)
+foreign key (customer_type_id) references customer_type (customer_type_id) on delete set null
 );
 
 
@@ -222,6 +230,8 @@ values
   (2, 'House'), 
   (3, 'Room');
   
+  select * from facility_type;
+
 create table rent_type(
 rent_type_id int auto_increment primary key,
 name varchar(45)
@@ -234,6 +244,9 @@ values
   (2, 'Month'), 
   (3, 'Day'), 
   (4, 'Hour');
+  
+  -- Câu truy vấn
+   select*from rent_type;
 
 
 create table facility(
@@ -249,8 +262,8 @@ description_other_convenience varchar(45),
 pool_area double,
 number_of_floors int,
 facility_free text,
-foreign key(facility_type_id) references facility_type(facility_type_id),
-foreign key(rent_type_id) references rent_type(rent_type_id)
+foreign key(facility_type_id) references facility_type(facility_type_id)on delete set null,
+foreign key(rent_type_id) references rent_type(rent_type_id) on delete set null
 );
 
 insert into facility ()
@@ -284,7 +297,10 @@ values
     3, null, null, null, null, '1 xe máy'
   );
 
-
+-- Câu truy vấn 
+select f.* ,r.name as rent_type , ft.name as facility_type from facility f 
+join rent_type r  on f.rent_type_id = r.rent_type_id
+join facility_type ft on f.facility_type_id =ft.facility_type_id;
 
 create table contract (
 contract_id int auto_increment primary key,
@@ -294,9 +310,9 @@ deposit double,
 employee_id int,
 customer_id int,
 facility_id int,
-foreign key(employee_id) references employee(employee_id),
-foreign key(customer_id) references customer(customer_id),
-foreign key(facility_id) references facility(facility_id)
+foreign key(employee_id) references employee(employee_id)on delete set null,
+foreign key(customer_id) references customer(customer_id)on delete set null,
+foreign key(facility_id) references facility(facility_id) on delete set null
 );
 
 insert into contract (
@@ -392,8 +408,8 @@ id int  primary key,
 contract_id int,
 attach_facility_id int,
 quantity int,
-foreign key (contract_id) references contract(contract_id),
-foreign key (attach_facility_id) references attach_facility(attach_facility_id)
+foreign key (contract_id) references contract(contract_id) on delete set null,
+foreign key (attach_facility_id) references attach_facility(attach_facility_id) on delete set null
 );
 
 insert into contract_detail (

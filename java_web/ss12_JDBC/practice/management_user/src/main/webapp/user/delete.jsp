@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><button type="submit">Delete User</button>></td>
+                <td><button type="submit">Delete User</button></td>
             </tr>
         </table>
     </fieldset>

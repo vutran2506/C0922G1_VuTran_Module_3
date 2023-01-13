@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d7bbb2c-7c26-4413-9800-65bc4ce682aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../casestudy_web_back_end/demo/demo_chuyen_trang/src/main/java/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy_web_back_end/demo/demo_chuyen_trang/src/main/java/model/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy_web_back_end/demo/demo_chuyen_trang/src/main/webapp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy_web_back_end/demo/demo_chuyen_trang/src/main/webapp/view_furama.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy_web_back_end/resort_furama/src/main/java/layout_furama/furama.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy_web_back_end/resort_furama/src/main/webapp/view_faclity.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/.idea/jdbc_transaction.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/com/example/demo_student/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/controller/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/repository/IStudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/repository/impl/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/repository/impl/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/service/IStudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/java/students/service/impl/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/webapp/student/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbc_transaction/demo_student/src/main/webapp/student/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/application_calculator/src/main/java/com/example/application_calculator/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/application_calculator/src/main/webapp/exception.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/application_calculator/src/main/webapp/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/calculator/.idea/modules/calculator.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/calculator/.idea/modules/calculator.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/calculator/calculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/src/main/java/com/example/customer_list/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/src/main/java/model/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jstl/exercise/customer_list/src/main/webapp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/.idea/ss10_mvc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/confin/config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/java/com/codegym/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/demo_customer_mvc/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/controler/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/java/codegym/com/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_mvc/practice/practice_mvc/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_JDBC/.idea/ss12_JDBC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_JDBC/exercise/.idea/exercise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/.idea/practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packaging/src/main/java/quadratic/Quadratic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quadratic_equation/quadratic_equation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_java_web/exercise/discount_product/src/main/java/com/example/discount_product/DiscountPriceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_java_web/exercise/discount_product/src/main/webapp/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_java_web/exercise/product_discount_calculator/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc_transaction/call_mysql_stored_procedure_from_jdbc/src/main/webapp/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/java/com/product/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/java/com/product/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/java/com/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/java/com/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/webapp/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/webapp/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/webapp/product/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/exercise/mangement_product/src/main/webapp/product/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/java/management_user/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/java/management_user/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/sort.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_JDBC/practice/management_user/src/main/webapp/user/sort.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Jwec4tU0ve5gwgQvBqeaIG8twx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/CodeGym_Module_3/java_web/ss14_dependency_packaging/quadratic_equation"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d7bbb2c-7c26-4413-9800-65bc4ce682aa" name="Changes" comment="" />
+      <created>1672993648684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672993648684</updated>
+      <workItem from="1672993650060" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
